@@ -1,0 +1,553 @@
+/* ═══════════════════════════════════════
+   PROJECTS — scoped under .page-projects
+═══════════════════════════════════════ */
+
+/* PAGE HEADER */
+.page-projects .page-header {
+  padding: 10rem 4rem 4rem;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 4rem;
+}
+
+.page-projects .page-header::before {
+  content: '';
+  position: absolute;
+  top: -100px; right: -100px;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(77,97,244,0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.page-projects .page-header h1 {
+  font-family: var(--ff-Montserrat);
+  font-weight: 900;
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  line-height: 1.05;
+  color: var(--off-white);
+}
+
+.page-projects .page-header h1 span { color: var(--sapphire); }
+
+.page-projects .page-header-right {
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.page-projects .project-count {
+  font-family: var(--ff-Montserrat);
+  font-weight: 900;
+  font-size: 5rem;
+  line-height: 1;
+  color: color-mix(in srgb, var(--sapphire) 50%, transparent);
+  display: block;
+}
+
+.page-projects .project-count-label {
+  font-family: 'Arsenal SC', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--grey-olive);
+}
+
+/* FILTER BAR */
+.page-projects .filter-bar {
+  padding: 0 4rem;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  position: sticky;
+  top: 73px;
+  background-color: var(--palm-leaf);
+  backdrop-filter: blur(12px);
+  z-index: 50;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-projects .filter-tabs {
+  display: flex;
+  gap: 0;
+}
+
+.page-projects .filter-btn {
+  font-family: 'Arsenal SC', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 1.25rem 1.75rem;
+  background: transparent;
+  color: var(--off-white);
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: -1px;
+}
+
+.page-projects .filter-btn.active {
+  color: var(--off-white);
+  border-bottom-color: var(--chartreuse);
+}
+
+.page-projects .filter-btn:hover { color: var(--grey-olive); }
+
+.page-projects .filter-intro {
+  font-size: 0.8rem;
+  color: var(--off-white);
+  font-style: italic;
+  font-weight: 300;
+}
+
+/* PROJECTS GRID */
+.page-projects .filter-description {
+  font-size: .875rem;
+  color: var(--navy-blue);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.75;
+  white-space: pre-line;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.page-projects .projects-section {
+  padding: 4rem;
+  background-color: var(--grey-olive);
+}
+
+.page-projects .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.page-projects .project-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: all 0.3s;
+  animation: fadeUp 0.6s ease both;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-projects .project-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--sapphire);
+  transform: scaleX(0);
+  transition: transform 0.3s;
+  transform-origin: left;
+}
+
+.page-projects .project-card:hover::before { transform: scaleX(1); }
+.page-projects .project-card:hover { background: rgba(255,255,255,0.05); }
+
+.page-projects .project-card:nth-child(1) { animation-delay: 0.1s; }
+.page-projects .project-card:nth-child(2) { animation-delay: 0.2s; }
+.page-projects .project-card:nth-child(3) { animation-delay: 0.3s; }
+.page-projects .project-card:nth-child(4) { animation-delay: 0.5s; }
+
+.page-projects .project-card-top {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.page-projects .project-tag {
+  font-family: 'Arsenal SC', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--chartreuse);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  align-self: flex-start;
+  width: fit-content;
+}
+
+.page-projects .project-tag::before {
+  content: '';
+  display: block;
+  width: 2rem;
+  height: 1px;
+  background: var(--chartreuse);
+  flex-shrink: 0;
+}
+
+.page-projects .project-tag.pm { color: var(--sapphire); }
+.page-projects .project-tag.pm::before { background: var(--sapphire); }
+.page-projects .project-tag.both { color: var(--palm-leaf); }
+.page-projects .project-tag.both::before { background: var(--palm-leaf); }
+
+.page-projects .project-title {
+  font-family: var(--ff-Montserrat);
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: var(--off-white);
+  line-height: 1.1;
+}
+
+.page-projects .project-desc {
+  font-size: 0.875rem;
+  color: var(--grey-olive);
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+.page-projects .project-meta {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem 0;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.page-projects .project-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.page-projects .meta-label {
+  font-family: 'Arsenal SC', sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--palm-leaf);
+}
+
+.page-projects .meta-value {
+  font-family: 'Arsenal SC', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--off-white);
+}
+
+.page-projects .project-tool-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.page-projects .tool-tag {
+  font-family: 'Arsenal SC', sans-serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--palm-leaf);
+  border: 1px solid rgba(170,169,90,0.25);
+  padding: 0.2rem 0.6rem;
+}
+
+.page-projects .project-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.page-projects .project-card-actions .btn-primary {
+  font-size: 0.75rem;
+  padding: 0.6rem 1.25rem;
+}
+
+.page-projects .btn-view {
+  font-family: 'Arsenal SC', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: var(--sapphire);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.25rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.page-projects .btn-view:hover {
+  background: var(--chartreuse);
+  color: var(--jet-black);
+}
+
+.page-projects .btn-github {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px; height: 36px;
+  border: 1px solid rgba(255,255,255,0.15);
+  color: var(--grey-olive);
+  text-decoration: none;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.page-projects .btn-github:hover {
+  border-color: var(--chartreuse);
+  color: var(--chartreuse);
+}
+
+/* PLACEHOLDER CARD */
+.page-projects .placeholder-card {
+  background: var(--off-white);
+  border: 1px dashed rgba(22,29,28,0.18);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  min-height: 320px;
+  align-self: stretch;
+}
+
+.page-projects .placeholder-icon {
+  font-size: 1.5rem;
+  color: var(--sapphire);
+}
+
+.page-projects .placeholder-text {
+  font-family: 'Arsenal SC', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--palm-leaf);
+  text-align: center;
+}
+
+/* CTA */
+.page-projects .projects-cta {
+  padding: 5rem 4rem;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.page-projects .projects-cta h2 {
+  font-family: var(--ff-Montserrat);
+  font-weight: 900;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  color: var(--off-white);
+  margin-bottom: 0.5rem;
+}
+
+.page-projects .projects-cta h2 span { color: var(--sapphire); }
+
+.page-projects .projects-cta p {
+  font-size: 0.9rem;
+  color: var(--grey-olive);
+  font-weight: 300;
+  max-width: 400px;
+  line-height: 1.7;
+}
+
+.page-projects .cta-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+/* BUTTONS (projects variant — borderless primary / faint secondary) */
+.page-projects .btn-primary {
+  font-family: 'Arsenal SC', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: var(--sapphire);
+  color: white;
+  border: none;
+  padding: 0.9rem 2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.page-projects .btn-primary:hover {
+  background: var(--chartreuse);
+  color: var(--jet-black);
+}
+
+.page-projects .btn-secondary {
+  font-family: 'Arsenal SC', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--off-white);
+  border: 1px solid rgba(255,255,255,0.25);
+  padding: 0.9rem 2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.page-projects .btn-secondary:hover {
+  border-color: var(--chartreuse);
+  color: var(--chartreuse);
+}
+
+/* VERTICAL CARD STYLE */
+.page-projects .project-card.project-card-vertical {
+  padding: 0;
+  overflow: hidden;
+  background: var(--off-white);
+  border: 1px solid rgba(0,0,0,0.12);
+}
+
+.page-projects .project-card-vertical::before { display: none; }
+.page-projects .project-card-vertical .project-title { color: var(--jet-black); }
+
+.page-projects .project-card-vertical .project-desc {
+  color: var(--jet-black);
+  opacity: 0.65;
+  margin-top: 0.35rem;
+}
+
+.page-projects .project-card-vertical .project-tag {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: var(--off-white);
+  display: inline-block;
+  border: none;
+  padding: 0.35rem 0.85rem;
+  background: rgba(30, 42, 120, 0.92);
+  backdrop-filter: blur(4px);
+  width: fit-content;
+  align-self: unset;
+}
+
+.page-projects .project-card-vertical .project-tag::before { display: none; }
+
+.page-projects .project-card-vertical .tool-tag {
+  color: var(--navy-blue);
+  border-color: rgba(22,29,28,0.1);
+}
+
+.page-projects .project-card-vertical .project-card-body { padding-top: 1rem; }
+.page-projects .project-card-vertical .project-card-top { gap: 0.4rem; }
+
+.page-projects .project-card-vertical .project-card-actions {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0.1rem;
+}
+
+.page-projects .project-card-vertical .project-tool-tags {
+  flex: 1;
+  align-content: center;
+}
+
+.page-projects .project-card-vertical .project-meta {
+  border-top-color: rgba(0,0,0,0.08);
+  border-bottom-color: rgba(0,0,0,0.08);
+}
+
+.page-projects .project-card-vertical .meta-label { color: var(--sapphire); }
+.page-projects .project-card-vertical .meta-value { color: var(--jet-black); }
+
+.page-projects .project-card-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.page-projects .project-card-link:nth-child(1) .project-card-image { background-color: #C4C4C4; }
+.page-projects .project-card-link:nth-child(2) .project-card-image { background-color: #ffffff; }
+.page-projects .project-card-link:nth-child(3) .project-card-image { background-color: #dcd1c8; }
+.page-projects .project-card-link:nth-child(4) .project-card-image { background-color: var(--jet-black); }
+.page-projects .project-card-link:nth-child(5) .project-card-image { background-color: #e7ccbd; }
+
+.page-projects .project-card-image img {
+  width: 85%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.page-projects .project-card:hover .project-card-image img { transform: scale(1.1); }
+.page-projects .project-card-link:nth-child(4) .project-card-image img { width: 100%; }
+
+.page-projects .project-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.page-projects .project-card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1.75rem;
+}
+
+/* RESPONSIVE — PROJECTS */
+@media (max-width: 1023px) {
+  .page-projects .page-header { padding: 8rem 2rem 3rem; flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+  .page-projects .page-header-right { text-align: left; }
+  .page-projects .project-count { font-size: 3.5rem; }
+  .page-projects .filter-bar { padding: 0 2rem; flex-direction: column; align-items: flex-start; gap: 0; }
+  .page-projects .filter-intro { padding: 0.75rem 0; font-size: 0.75rem; }
+  .page-projects .projects-section { padding: 3rem 2rem; }
+  .page-projects .projects-grid { grid-template-columns: 1fr !important; align-items: start; }
+  .page-projects .projects-cta { padding: 4rem 2rem; flex-direction: column; align-items: flex-start; }
+  .page-projects .cta-buttons { flex-direction: row; }
+}
+
+@media (max-width: 767px) {
+  .page-projects .page-header { padding: 6rem 1.25rem 2.5rem; }
+  .page-projects .page-header h1 { font-size: clamp(1.8rem, 7vw, 2.5rem); }
+  .page-projects .filter-bar { padding: 0 1.25rem; top: 60px; }
+  .page-projects .filter-btn { padding: 1rem 1rem; font-size: 0.7rem; letter-spacing: 0.1em; }
+  .page-projects .projects-section { padding: 2rem 1.25rem; }
+  .page-projects .project-card { padding: 1.75rem; }
+  .page-projects .project-title { font-size: 1.4rem; }
+  .page-projects .project-meta { flex-wrap: wrap; gap: 1rem; }
+  .page-projects .projects-cta { padding: 3rem 1.25rem; }
+  .page-projects .cta-buttons { flex-direction: column; width: 100%; }
+  .page-projects .btn-primary, .page-projects .btn-secondary { text-align: center; width: 100%; }
+}
+
+@media (min-width: 1440px) {
+  .page-projects .projects-grid { grid-template-columns: repeat(3, 1fr); align-items: start; }
+}
+
+@media (min-width: 1920px) {
+  .page-projects .project-desc { font-size: 1rem; line-height: 1.8; }
+  .page-projects .meta-value { font-size: 0.85rem; }
+  .page-projects .filter-btn { font-size: 0.9rem; }
+  .page-projects .project-tag { font-size: 0.8rem; }
+  .page-projects .tool-tag { font-size: 0.72rem; padding: 0.25rem 0.75rem; }
+}
+
+@media (min-width: 2560px) {
+  .page-projects .project-desc { font-size: 1.1rem; }
+  .page-projects .project-tag { font-size: 0.9rem; }
+  .page-projects .tool-tag { font-size: 0.8rem; }
+}

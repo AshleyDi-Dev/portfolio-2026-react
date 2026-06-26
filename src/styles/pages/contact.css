@@ -1,0 +1,341 @@
+/* ═══════════════════════════════════════
+   CONTACT — scoped under .page-contact
+═══════════════════════════════════════ */
+
+.page-contact .contact-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 73px;
+}
+
+/* LEFT COLUMN */
+.page-contact .contact-left {
+  padding: 6rem 4rem;
+  border-right: 1px solid rgba(255,255,255,0.07);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4rem;
+  position: relative;
+  overflow: hidden;
+  animation: fadeUp 0.7s ease both;
+}
+
+.page-contact .contact-left::before {
+  content: '';
+  position: absolute;
+  bottom: -100px; left: -100px;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(77,97,244,0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.page-contact .contact-left h1 {
+  font-family: var(--ff-Montserrat);
+  font-weight: 900;
+  font-size: clamp(3rem, 5vw, 5rem);
+  line-height: 1.0;
+  color: var(--off-white);
+  margin-bottom: 2rem;
+}
+
+.page-contact .contact-left h1 span { color: var(--sapphire); }
+
+.page-contact .contact-left .availability {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--grey-olive);
+  font-weight: 300;
+  max-width: 420px;
+  margin-bottom: 3rem;
+}
+
+.page-contact .contact-left .availability strong {
+  color: var(--off-white);
+  font-weight: 500;
+}
+
+/* CONTACT LINKS */
+.page-contact .contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 3rem;
+}
+
+.page-contact .contact-link-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--palm-leaf);
+  text-decoration: none;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.page-contact .contact-link-item:first-child {
+  border-top: 1px solid rgba(255,255,255,0.07);
+}
+
+.page-contact .contact-link-item:hover .link-label { color: var(--chartreuse); }
+.page-contact .contact-link-item:hover .link-arrow { transform: translateX(4px); color: var(--chartreuse); }
+
+.page-contact .link-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.page-contact .link-icon {
+  width: 36px; height: 36px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+  color: var(--sapphire);
+}
+
+.page-contact .link-label {
+  font-family: 'Arsenal SC', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--off-white);
+  transition: color 0.2s;
+}
+
+.page-contact .link-sublabel {
+  font-size: 0.75rem;
+  color: var(--grey-olive);
+  font-weight: 300;
+  margin-top: 0.15rem;
+}
+
+.page-contact .link-arrow {
+  color: var(--grey-olive);
+  transition: all 0.2s;
+  font-size: 1rem;
+}
+
+/* EMAIL COPY */
+.page-contact .email-copy-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: transparent;
+  border: 1px solid var(--palm-leaf);
+  padding: 0.9rem 1.5rem;
+  color: var(--grey-olive);
+  cursor: pointer;
+  transition: all 0.2s;
+  width: fit-content;
+  font-family: 'Arsenal SC', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.page-contact .email-copy-btn:hover {
+  border-color: var(--chartreuse);
+  color: var(--chartreuse);
+}
+
+.page-contact .email-copy-btn.copied {
+  border-color: var(--chartreuse);
+  color: var(--chartreuse);
+}
+
+/* RIGHT COLUMN — FORM */
+.page-contact .contact-right {
+  padding: 6rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: fadeUp 0.7s 0.15s ease both;
+}
+
+.page-contact .form-label-section {
+  font-family: 'Arsenal SC', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--chartreuse);
+  margin-bottom: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.page-contact .form-label-section::before {
+  content: '';
+  display: block;
+  width: 2rem;
+  height: 1px;
+  background: var(--chartreuse);
+}
+
+.page-contact .contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.page-contact .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.page-contact .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.page-contact .form-group label {
+  font-family: 'Arsenal SC', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--grey-olive);
+}
+
+.page-contact .form-group input,
+.page-contact .form-group textarea,
+.page-contact .form-group select {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--palm-leaf);
+  padding: 0.85rem 1rem;
+  color: var(--off-white);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+  appearance: none;
+}
+
+.page-contact .form-group input::placeholder,
+.page-contact .form-group textarea::placeholder {
+  color: var(--palm-leaf);
+}
+
+.page-contact .form-group input:focus,
+.page-contact .form-group textarea:focus,
+.page-contact .form-group select:focus {
+  border-color: var(--sapphire);
+}
+
+.page-contact .form-group textarea {
+  resize: vertical;
+  min-height: 140px;
+  line-height: 1.6;
+}
+
+.page-contact .form-group select option {
+  background: var(--jet-black);
+  color: var(--off-white);
+}
+
+.page-contact .form-submit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+.page-contact .form-note {
+  font-size: 0.8rem;
+  color: var(--grey-olive);
+  font-weight: 300;
+}
+
+/* BUTTON (contact variant — borderless, wider padding) */
+.page-contact .btn-primary {
+  font-family: 'Arsenal SC', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: var(--sapphire);
+  color: white;
+  border: none;
+  padding: 0.9rem 2.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.page-contact .btn-primary:hover {
+  background: var(--chartreuse);
+  color: var(--jet-black);
+}
+
+/* TOAST */
+.page-contact .toast {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--chartreuse);
+  color: var(--jet-black);
+  font-family: 'Arsenal SC', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.75rem 1.5rem;
+  opacity: 0;
+  transition: all 0.3s;
+  pointer-events: none;
+}
+
+.page-contact .toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* RESPONSIVE — CONTACT */
+@media (max-width: 1023px) {
+  .page-contact .contact-page { grid-template-columns: 1fr; }
+  .page-contact .contact-left {
+    padding: 4rem 2rem;
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+  .page-contact .contact-right { padding: 4rem 2rem; }
+}
+
+@media (max-width: 767px) {
+  .page-contact .contact-left { padding: 3rem 1.25rem; }
+  .page-contact .contact-left h1 { font-size: clamp(2.5rem, 10vw, 4rem); }
+  .page-contact .contact-right { padding: 3rem 1.25rem; }
+  .page-contact .form-row { grid-template-columns: 1fr; }
+  .page-contact .form-submit { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .page-contact .btn-primary { width: 100%; text-align: center; }
+  .page-contact .email-copy-btn { width: 100%; justify-content: center; }
+}
+
+@media (min-width: 1440px) {
+  .page-contact .contact-left h1 { font-size: clamp(3rem, 3vw, 4rem); }
+}
+
+@media (min-width: 1920px) {
+  .page-contact .contact-page { max-width: 1440px; margin-left: auto; margin-right: auto; }
+  .page-contact .availability { font-size: 1.05rem; line-height: 1.9; }
+  .page-contact .form-group label { font-size: 0.8rem; }
+  .page-contact .form-group input,
+  .page-contact .form-group textarea,
+  .page-contact .form-group select { font-size: 1rem; }
+  .page-contact .link-label { font-size: 0.95rem; }
+  .page-contact .contact-left h1 { font-size: clamp(3.5rem, 3.5vw, 4.5rem); }
+}
+
+@media (min-width: 2560px) {
+  .page-contact .contact-page { max-width: 1440px; margin-left: auto; margin-right: auto; }
+  .page-contact .availability { font-size: 1.15rem; }
+  .page-contact .contact-left h1 { font-size: clamp(4rem, 3.5vw, 5rem); }
+}

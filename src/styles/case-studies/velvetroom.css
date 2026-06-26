@@ -1,0 +1,117 @@
+/* ═══════════════════════════════════════
+   VELVET ROOM — per-study overrides
+═══════════════════════════════════════ */
+
+/* PAGE 1 — HERO (jet-black) */
+.velvet-page-hero { background: var(--jet-black); justify-content: space-between; }
+.velvet-hero-section { flex: 1; }
+.velvet-hero-tags { margin-top: 1.25rem; margin-bottom: 0; }
+
+/* PAGE 2 — OVERVIEW (off-white) */
+.velvet-overview-page { background: var(--off-white); padding-top: 4rem; padding-bottom: 1rem; }
+.velvet-overview-page .cs-split-text { background: transparent; }
+.velvet-overview-page .cs-split-image { background: transparent; padding: 2rem; }
+.velvet-overview-page .section-label { color: var(--sapphire); }
+.velvet-overview-page h2 { color: var(--jet-black); }
+.velvet-overview-page h2 span { color: var(--sapphire); }
+.velvet-overview-page .cs-split-text p { color: var(--jet-black); }
+.velvet-overview-page .cs-split-text p strong { color: var(--sapphire); }
+
+/* PAGE 3 — CHALLENGE (palm-leaf) */
+.velvet-challenge-page { background: var(--palm-leaf); padding-top: 4rem; padding-bottom: 1rem; }
+.velvet-challenge-page .cs-split-text { background: transparent; }
+.velvet-challenge-page .section-label { color: var(--chartreuse); }
+.velvet-challenge-page h2 { color: var(--off-white); }
+.velvet-challenge-page h2 span { color: var(--chartreuse); }
+.velvet-challenge-page .cs-split-text p { color: var(--off-white); }
+.velvet-userstories-image { background: transparent; padding: 2rem; }
+.velvet-userstories-image img { width: 100%; height: auto; display: block; }
+
+/* PAGE 4 — RISKS (jet-black) */
+.velvet-risks-page { background: var(--jet-black); }
+.velvet-risks-page .section-label { color: var(--chartreuse); }
+.velvet-risks-page h2 { color: var(--off-white); }
+.velvet-risks-page h2 span { color: var(--chartreuse); }
+.velvet-risks-page .risk-section-title { color: var(--chartreuse); }
+.velvet-risks-page .risk-card h4 { color: var(--off-white); }
+.velvet-risks-page .risk-card p { color: var(--off-white); }
+
+/* PAGE 5 — SPRINT BREAKDOWN (off-white) */
+.velvet-sprint-page { background: var(--off-white); }
+.velvet-sprint-page .section-label { color: var(--sapphire); }
+.velvet-sprint-page h2 { color: var(--jet-black); }
+.velvet-sprint-page h2 span { color: var(--sapphire); }
+.velvet-sprint-page .body-text { color: var(--jet-black); }
+.velvet-sprint-page .cs-phase-list { border-left-color: var(--sapphire); }
+.velvet-sprint-page .cs-phase-item::before { background: var(--sapphire); }
+.velvet-sprint-page .cs-phase-item strong { color: var(--sapphire); }
+.velvet-sprint-page .cs-phase-item p { color: var(--jet-black); }
+
+/* PAGE 6 — WIREFRAMES (grey-olive) */
+.velvet-wireframes-page { background: var(--grey-olive); padding-top: 4rem; padding-bottom: 1rem; }
+.velvet-wireframes-section { background: transparent; }
+.velvet-wireframes-section .section-label { color: var(--jet-black); }
+.velvet-wireframes-section h2 { color: var(--jet-black); }
+.velvet-wireframes-section h2 span { color: var(--sapphire); }
+.velvet-wireframes-section p { color: var(--jet-black); }
+.velvet-wireframes-panel { display: flex; flex-direction: row; gap: 1.5rem; margin-top: 2rem; }
+.velvet-wireframes-panel img { flex: 1; height: 40vh; border-radius: 6px; display: block; object-fit: contain; }
+
+/* PAGE 7 — OUTCOMES (jet-black) */
+.velvet-outcomes-page { background: var(--jet-black); }
+.velvet-outcomes-page .cs-outcomes { background: transparent; }
+.velvet-outcomes-page .section-label { color: var(--chartreuse); }
+.velvet-outcomes-page h2 { color: var(--off-white); }
+.velvet-outcomes-page h2 span { color: var(--chartreuse); }
+.velvet-outcomes-page .outcome-card p { color: var(--off-white); }
+.velvet-outcomes-page .outcome-card p strong { color: var(--off-white); }
+
+/* PAGE 8 — PROTOTYPE (off-white) */
+.velvet-prototype-page { background: var(--off-white); padding-top: 4rem; padding-bottom: 1rem; }
+.velvet-prototype-page .cs-split-text { background: transparent; }
+.velvet-prototype-page .section-label { color: var(--sapphire); }
+.velvet-prototype-page h2 { color: var(--jet-black); }
+.velvet-prototype-page h2 span { color: var(--sapphire); }
+.velvet-prototype-page .cs-split-text p { color: var(--jet-black); }
+.velvet-live-prototype-image { padding: 2rem; background: transparent; display: flex; align-items: center; justify-content: center; }
+.velvet-live-prototype-image img { width: 100%; height: auto; display: block; }
+.velvet-live-prototype-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.75rem;
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  font-family: "Arsenal SC", sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--jet-black);
+  text-decoration: none;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+.velvet-live-prototype-link:hover { border-color: var(--sapphire); color: var(--sapphire); }
+
+/* PAGE 9 — REFLECTION (jet-black) */
+.velvet-reflection-page { background: var(--jet-black); justify-content: space-between; }
+.velvet-reflection-section { flex: 1; background: var(--palm-leaf); }
+.velvet-reflection-section p { color: var(--off-white); }
+
+/* UTILITIES */
+.velvet-full-height { height: 100%; }
+
+/* RESPONSIVE */
+@media (max-width: 767px) {
+  .velvet-challenge-page .cs-split { display: flex; flex-direction: column; }
+  .velvet-challenge-page .cs-split-image { order: 2; }
+  .velvet-challenge-page .cs-split-text { order: 1; }
+  .velvet-risks-page .cs-risks-band { padding: 2rem 1.25rem; }
+  .velvet-risks-page .risk-card { padding: 1.25rem; }
+  .velvet-risks-page .cs-risks-band h2 { text-align: left; }
+  .velvet-risks-page .cs-risks-band .section-label { text-align: left; }
+}
+
+@media (max-width: 768px) {
+  .velvet-wireframes-panel { flex-direction: column; }
+  .velvet-wireframes-panel img { height: auto; max-height: 40vh; width: 100%; }
+}

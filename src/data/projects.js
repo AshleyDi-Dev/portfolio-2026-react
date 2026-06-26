@@ -1,0 +1,102 @@
+/* Project data. Home shows `featured` (3); Projects shows `all` (5) with filtering.
+   Copy is kept verbatim from the original pages (the two grids word differently). */
+
+export const featured = [
+  {
+    to: '/projects/casestudy-firewatchbc',
+    image: '/images/case-studies/FirewatchBC-Hero.png',
+    alt: 'FireWatch BC App Screens',
+    tag: 'Project Management',
+    title: 'FireWatch BC Wildfire App',
+    desc: 'UX research and product delivery for a wildfire emergency app concept — managing sprint planning, project tracking, and usability testing across an 8-week Lean UX cycle to validate a design that works under pressure.',
+    tools: ['Product Thinking', 'Lean UX', 'UX Research', 'Usability Testing', 'Scope & Prioritization'],
+  },
+  {
+    to: '/projects/casestudy-lanotte',
+    image: '/images/case-studies/LaNotte-Hero.jpg',
+    alt: 'La Notte Website and App Screens',
+    tag: 'Project Management',
+    title: 'La Notte Restaurant App',
+    desc: 'Waterfall delivery for a restaurant app concept — sequencing brand, product, and marketing across five phases while maintaining milestone visibility and absorbing a mid-project scope change without slipping the timeline.',
+    tools: ['Product Definition', 'Waterfall Delivery', 'Scope & Planning', 'Gantt & WBS'],
+  },
+  {
+    to: '/projects/casestudy-forme',
+    image: '/images/case-studies/Forme-Hero.png',
+    alt: 'Forme App Screens',
+    tag: 'Product / Build',
+    title: 'Forme Styling App',
+    desc: 'AI-assisted MVP build for a personalized styling app — defining product structure, building core quiz flows, and developing a rule-based recommendations engine to quickly move from idea to a testable product.',
+    tools: ['Product Thinking', 'AI Workflow', 'MVP Development', 'React', 'Supabase'],
+  },
+]
+
+export const all = [
+  {
+    to: '/projects/casestudy-firewatchbc',
+    category: 'pm',
+    image: '/images/case-studies/FirewatchBC-Hero.png',
+    alt: 'FireWatch BC App Screens',
+    tag: 'Project Management',
+    title: 'FireWatch BC Wildfire App',
+    desc: 'UX research and product delivery for a wildfire emergency app concept — managing sprint planning, usability testing, and research synthesis across an 8-week Lean UX cycle with a four-person team to validate a design that works under pressure.',
+    role: 'Project Manager - UX Research & Delivery',
+    type: 'Academic Project',
+    tools: ['Product Thinking', 'Lean UX', 'UX Research', 'Usability Testing', 'Scope & Prioritization'],
+  },
+  {
+    to: '/projects/casestudy-lanotte',
+    category: 'pm',
+    image: '/images/case-studies/LaNotte-Hero.jpg',
+    alt: 'La Notte Website and App Screens',
+    tag: 'Project Management',
+    title: 'La Notte Brand & App Concept',
+    desc: 'End-to-end Waterfall delivery for a fictional Italian restaurant concept — managing a full brand identity, mobile reservation app mockup, and marketing collateral across five sequential phases while maintaining milestone tracking and adapting to a mid-project scope change.',
+    role: 'Product Manager - Planning & Delivery',
+    type: 'Academic Project',
+    tools: ['Product Definition', 'Waterfall Delivery', 'Scope & Planning', 'Gantt & WBS'],
+  },
+  {
+    to: '/projects/casestudy-forme',
+    category: 'dev',
+    image: '/images/case-studies/Forme-Hero.png',
+    alt: 'Forme App Screens',
+    tag: 'Builds & Experiments',
+    title: 'Forme Styling App',
+    desc: 'AI-assisted MVP development for a personalized styling app — defining product structure, building onboarding and quiz flows, and creating a rule-based recommendations engine to translate user inputs into styling guidance, with a focus on moving quickly from idea to a testable build.',
+    role: 'Product Owner & Builder',
+    type: 'Solo Project (In Progress)',
+    tools: ['Product Definition', 'AI Workflow', 'MVP Development', 'React', 'Supabase', 'Rule-Based Systems'],
+  },
+  {
+    to: '/projects/casestudy-realstreet',
+    category: 'ex',
+    image: '/images/case-studies/RealStreet-Admat-2.png',
+    alt: 'REAL Street Flyer Admat',
+    tag: 'Project Management',
+    title: 'REAL Street Festival',
+    desc: 'Multi-stakeholder operations for a 40,000-person inaugural music festival — coordinating eight publicists across four independent PR teams, managing high-stakes access approvals, and keeping every moving part of live execution running on time.',
+    role: 'Media Operations & Live Event Delivery',
+    type: 'Client Project',
+    tools: ['Stakeholder Management', 'Operational Strategy', 'Media Relations', 'Live Execution', 'Cross-Team Coordination'],
+  },
+  {
+    to: '/projects/casestudy-velvetroom',
+    category: 'ex',
+    image: '/images/case-studies/VelvetRoom-Hero.jpg',
+    alt: 'Velvet Room Website Screen',
+    tag: 'Project Management',
+    title: 'Velvet Room Website',
+    desc: 'End-to-end Agile delivery for a responsive restaurant website — managing a dual Product Owner and Scrum Master role across five weekly sprints while keeping a cross-functional design and development team aligned and moving from backlog to launch.',
+    role: 'Product Owner & Scrum Master',
+    type: 'Academic Project',
+    tools: ['Agile / Scrum', 'Backlog Prioritization', 'Sprint Facilitation', 'Cross-Functional Delivery'],
+  },
+]
+
+export const filterDescriptions = {
+  all: "Here's how I think and what I ship.",
+  pm: 'Projects focused on defining what should be built and why — grounded in user needs, research, and decision-making that shapes the product itself.',
+  ex: 'Projects focused on turning ideas into reality — leading timelines, aligning teams, and ensuring complex work gets delivered in real-world conditions.',
+  dev: 'Hands-on projects where I test ideas, explore new tools, and build working products — often using AI to improve speed and workflow.',
+}

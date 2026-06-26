@@ -1,0 +1,1164 @@
+/* ═══════════════════════════════════════
+   SHARED CASE STUDY SCAFFOLD
+   Class names are unique to case studies, so they stay global —
+   except .section-label, which collides with the standard pages and
+   is therefore scoped under .cs-root.
+═══════════════════════════════════════ */
+
+.cs-root .page,
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* ─── LEGACY CASE HERO ─── */
+.case-hero {
+  margin-top: 73px;
+  position: relative;
+  height: 480px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+.hero-image {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #2a3a50 0, #1a2535 50%, #0f1a25 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  opacity: 0.3;
+}
+
+.hero-image-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  opacity: 0.2;
+}
+
+.hero-image-placeholder span {
+  font-family: "Arsenal SC", sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--off-white);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, #1b2d2a 0, rgba(27, 45, 42, 0.6) 40%, rgba(27, 45, 42, 0.2) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 3rem 4rem;
+  width: 100%;
+}
+
+.hero-tags {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.hero-tag {
+  font-family: "Arsenal SC", sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.7rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--grey-olive);
+}
+
+.hero-tag.primary {
+  color: var(--chartreuse);
+  border-color: rgba(206, 255, 26, 0.35);
+}
+
+.case-hero h1 {
+  font-family: var(--ff-Montserrat);
+  font-weight: 900;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1;
+  color: var(--off-white);
+  margin-bottom: 0.5rem;
+}
+
+.case-hero h1 span { color: var(--sapphire); }
+
+.hero-subtitle {
+  font-family: "Arsenal SC", sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  color: var(--grey-olive);
+  text-transform: uppercase;
+}
+
+/* ─── DETAILS BAR ─── */
+.details-bar {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 0 4rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  background-color: var(--navy-blue);
+}
+
+.detail-item {
+  padding: 1.75rem 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.07);
+  padding-right: 2rem;
+  padding-left: 0;
+}
+
+.detail-item:not(:first-child) { padding-left: 2rem; }
+.detail-item:last-child { border-right: none; }
+
+.detail-label {
+  font-family: "Arsenal SC", sans-serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--chartreuse);
+  margin-bottom: 0.35rem;
+}
+
+.detail-value {
+  font-family: "Arsenal SC", sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  color: var(--off-white);
+  line-height: 1.4;
+}
+
+/* ─── LEGACY CASE CONTENT ─── */
+.case-content {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 5rem 4rem;
+  animation: fadeUp 0.7s ease both;
+}
+
+/* SECTION LABEL (case study — chartreuse; scoped to override standard pages) */
+.cs-root .section-label {
+  font-family: "Arsenal SC", sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--chartreuse);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.cs-root .section-label::before {
+  content: "";
+  display: block;
+  width: 1.75rem;
+  height: 1px;
+  background: currentColor;
+  flex-shrink: 0;
+}
+
+.case-content h2 {
+  font-family: var(--ff-Montserrat);
+  font-weight: 900;
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  color: var(--off-white);
+  margin-bottom: 1.25rem;
+  line-height: 1.1;
+}
+
+.case-content h2 span { color: var(--sapphire); }
+
+.body-text {
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: var(--grey-olive);
+  font-weight: 300;
+}
+
+.body-text + .body-text { margin-top: 1.25rem; }
+
+.body-text strong {
+  color: var(--off-white);
+  font-weight: 500;
+}
+
+.content-divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  margin: 4rem 0;
+}
+
+/* ─── LEGACY MEDIA BLOCKS ─── */
+.image-block {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 3rem 0;
+  padding: 3rem;
+  min-height: 280px;
+}
+
+.image-block img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.image-block-label {
+  font-family: "Arsenal SC", sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.image-caption {
+  font-size: 0.78rem;
+  color: var(--grey-olive);
+  font-style: italic;
+  font-weight: 300;
+  text-align: center;
+  margin-top: -2rem;
+  margin-bottom: 3rem;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  margin: 3rem 0;
+}
+
+.image-grid-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px dashed rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 2rem;
+  min-height: 180px;
+}
+
+.image-grid-item .image-block-label { color: rgba(255, 255, 255, 0.15); }
+
+/* ─── RISKS / HIGHLIGHTS / OUTCOMES ─── */
+.risks-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 2rem;
+}
+
+.risk-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--palm-leaf);
+  padding: 2rem 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  transition: background 0.2s;
+}
+
+.risk-card:hover { background: rgba(255, 255, 255, 0.05); }
+
+.risk-section-title {
+  font-family: "Arsenal SC", sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--chartreuse);
+  margin-bottom: 0.5rem;
+}
+
+.risk-card h4 {
+  font-family: "Arsenal SC", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--off-white);
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.03em;
+  line-height: 1.3;
+}
+
+.risk-card p {
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: var(--grey-olive);
+  font-weight: 300;
+}
+
+.risk-divider {
+  width: 1px;
+  background: rgba(255, 255, 255, 0.07);
+  display: none;
+}
+
+.highlight-box {
+  background: rgba(77, 97, 244, 0.08);
+  border: 1px solid rgba(77, 97, 244, 0.2);
+  border-left: 3px solid var(--sapphire);
+  padding: 2.5rem;
+  margin: 2rem 0;
+}
+
+.highlight-box h3 {
+  font-family: "Arsenal SC", sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--sapphire);
+  margin-bottom: 1.25rem;
+}
+
+.highlight-box p {
+  font-size: 0.92rem;
+  line-height: 1.85;
+  color: var(--off-white);
+  font-weight: 300;
+}
+
+.highlight-box p + p { margin-top: 1rem; }
+
+.outcomes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.outcome-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 1.75rem 2rem;
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.outcome-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--chartreuse);
+  flex-shrink: 0;
+  margin-top: 0.35rem;
+}
+
+.outcome-card p {
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--grey-olive);
+  font-weight: 300;
+}
+
+.outcome-card p strong {
+  color: var(--off-white);
+  font-weight: 500;
+  display: block;
+  margin-bottom: 0.2rem;
+  font-family: "Arsenal SC", sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+}
+
+.reflection-block {
+  background: rgba(206, 255, 26, 0.04);
+  border: 1px solid rgba(206, 255, 26, 0.1);
+  padding: 2.5rem;
+  margin-top: 2rem;
+}
+
+.reflection-block p {
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: var(--grey-olive);
+  font-weight: 300;
+  font-style: italic;
+}
+
+.reflection-block p strong {
+  color: var(--off-white);
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* ─── PROJECT NAV ─── */
+.project-nav {
+  padding: 3rem 4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-nav-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.project-nav-item:hover .nav-project-title { color: var(--chartreuse); }
+.project-nav-item--right { text-align: right; }
+
+.nav-direction {
+  font-family: "Arsenal SC", sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--grey-olive);
+}
+
+.nav-project-title {
+  font-family: "Arsenal SC", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--off-white);
+  transition: color 0.2s;
+}
+
+.btn-all-projects {
+  font-family: "Arsenal SC", sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: 0 0;
+  color: var(--off-white);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.btn-all-projects:hover {
+  border-color: var(--chartreuse);
+  color: var(--chartreuse);
+}
+
+/* ─── SHARED FULL-PAGE CASE STUDY HERO ─── */
+.cs-hero {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+  background: #0a0a0a;
+}
+
+.cs-hero img {
+  order: 2;
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  margin: 0;
+  background: var(--cs-hero-img-bg, #0a0a0a);
+  padding: 2rem 3vw;
+  box-sizing: border-box;
+}
+
+.cs-hero-content {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  min-width: 0;
+  padding: 2rem 3vw;
+}
+
+.cs-hero-content .hero-tags { margin-bottom: 1.5rem; }
+
+.cs-hero-content h1 {
+  font-family: var(--ff-Montserrat);
+  font-weight: 900;
+  font-size: clamp(2.25rem, 5vw, 4.5rem);
+  color: #fff;
+  line-height: 1;
+  margin: 0 0 1rem;
+  text-shadow: 0 2px 40px rgba(0, 0, 0, 0.5);
+}
+
+.cs-hero-content h1 span { color: var(--sapphire); }
+
+.cs-hero-content .hero-subtitle {
+  font-family: "Arsenal SC", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--off-white);
+}
+
+.cs-hero-gradient { display: none; }
+
+/* ─── SCROLL HINT ─── */
+.scroll-hint {
+  align-self: center;
+  padding: 1.25rem 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  opacity: 0.45;
+  animation: bob 2s ease-in-out infinite;
+}
+
+.scroll-hint span {
+  font-family: "Arsenal SC", sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.scroll-hint svg {
+  width: 18px;
+  height: 18px;
+  stroke: #fff;
+  fill: none;
+  stroke-width: 2;
+}
+
+/* ─── SHARED TEXT / SPLIT LAYOUTS ─── */
+.cs-text-section {
+  padding: 5rem 5vw;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cs-text-section .section-label { margin-bottom: 0.75rem; }
+.cs-text-section h2 { margin-bottom: 1.5rem; }
+
+.cs-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex: 1;
+  height: 100%;
+}
+
+.cs-split-image {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0a0a0a;
+}
+
+.cs-split-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.cs-split-text {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--bg, #0f1a14);
+  overflow-y: auto;
+}
+
+.cs-split-text .section-label { margin-bottom: 0.75rem; }
+
+.cs-split-text h2 {
+  font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+  margin-bottom: 1.5rem;
+}
+
+.cs-split-text p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--text-secondary, rgba(255, 255, 255, 0.65));
+  margin-bottom: 1rem;
+}
+
+.cs-split-text p:last-child { margin-bottom: 0; }
+
+/* ─── SHARED SECTION TYPES ─── */
+.cs-risks-band {
+  background: transparent;
+  padding: 5rem 5vw 4rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cs-risks-band .section-label { text-align: center; margin-bottom: 0.75rem; }
+.cs-risks-band > h2 { text-align: center; margin-bottom: 2rem; }
+
+.cs-phases {
+  padding: 5rem 5vw 4rem;
+  background: transparent;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cs-phases .section-label { margin-bottom: 0.75rem; }
+.cs-phases > h2 { margin-bottom: 1rem; }
+.cs-phases > p.body-text { margin-bottom: 2rem; }
+
+.cs-outcomes {
+  padding: 5rem 5vw 4rem;
+  background: #0a0a0a;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cs-outcomes .section-label { margin-bottom: 0.75rem; }
+.cs-outcomes > h2 { margin-bottom: 2rem; }
+
+.cs-reflection {
+  padding: 4rem 5vw;
+  background: #0f1a14;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+.cs-reflection .section-label { margin-bottom: 1rem; }
+
+.cs-reflection h2 {
+  margin-bottom: 2rem;
+  font-size: clamp(1.75rem, 3vw, 2.75rem);
+}
+
+.cs-reflection p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* ─── PHASE LIST ─── */
+.cs-phase-list {
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid var(--off-white);
+  margin-left: 1rem;
+}
+
+.cs-phase-item {
+  position: relative;
+  padding: 1.25rem 0 1.25rem 2.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.cs-phase-item:last-child { border-bottom: none; }
+
+.cs-phase-item::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 1.6rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--off-white);
+}
+
+.cs-phase-item strong {
+  display: block;
+  font-family: "Arsenal SC", sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--chartreuse);
+  margin-bottom: 0.35rem;
+}
+
+.cs-phase-item p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ─── HELPERS ─── */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cs-fullbleed-caption {
+  text-align: center;
+  font-family: "Arsenal SC", sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted, #888);
+  padding: 1rem 0;
+  flex-shrink: 0;
+}
+
+/* ─── PROTOTYPE PANELS ─── */
+.prototype-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: transparent;
+  overflow: hidden;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.prototype-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  text-decoration: none;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.prototype-preview-img {
+  flex: 1;
+  min-height: 0;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.prototype-preview:hover .prototype-preview-img {
+  opacity: 0.85;
+  transform: scale(1.01);
+}
+
+.prototype-preview-cta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.prototype-preview-eyebrow {
+  font-family: "Arsenal SC", sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.prototype-preview-arrow {
+  font-family: "Arsenal SC", sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.prototype-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.75rem;
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  font-family: "Arsenal SC", sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.prototype-image-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  padding: 2rem;
+}
+
+.prototype-image-panel img {
+  max-height: 65vh;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.prototype-mobile { display: none !important; }
+
+.prototype-mobile-card {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1.25rem;
+}
+
+.prototype-mobile-preview-wrap { margin-bottom: 1rem; }
+
+.prototype-mobile-phone {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  border-radius: 2rem;
+  padding: 0.55rem;
+  background: transparent;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.28);
+}
+
+.prototype-mobile-preview {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  aspect-ratio: 9 / 19.5;
+  background: transparent;
+}
+
+.prototype-mobile-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.prototype-mobile-preview::after {
+  content: "Prototype preview";
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  padding: 0.45rem 0.6rem;
+  border-radius: 999px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(10, 10, 10, 0.58);
+  backdrop-filter: blur(6px);
+}
+
+.prototype-mobile-eyebrow {
+  display: block;
+  font-family: "Arsenal SC", sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+  margin-bottom: 0.75rem;
+}
+
+.prototype-mobile-card h3 {
+  font-family: "Arsenal SC", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  color: var(--off-white);
+  margin: 0 0 0.75rem;
+}
+
+.prototype-mobile-card p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0 0 1.25rem;
+}
+
+.prototype-mobile-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 1.25rem;
+  border-radius: 999px;
+  background: var(--sapphire);
+  color: var(--off-white);
+  text-decoration: none;
+  font-family: "Arsenal SC", sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.prototype-mobile-btn:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+.prototype-caption {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 2;
+  font-family: "Arsenal SC", sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--palm-leaf);
+  pointer-events: none;
+}
+
+/* ═══════════════════════════════════════
+   CONSOLIDATED SIDEBAR TOC (shared by all case studies)
+═══════════════════════════════════════ */
+.cs-toc,
+.cs-toc *,
+.cs-toc *::before,
+.cs-toc *::after {
+  box-sizing: border-box;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  filter: none !important;
+}
+
+.cs-toc {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) translateX(-8px);
+  z-index: 100;
+  opacity: 0;
+  width: max-content;
+  padding: 0;
+  background-color: transparent;
+  box-shadow: none;
+  overflow: visible;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+.cs-toc.is-visible {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+  pointer-events: auto;
+}
+
+.cs-toc-list {
+  list-style: none;
+  margin: 0;
+  padding: 0.75rem 1rem 0.75rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  background-color: transparent;
+  transition: background-color 0.2s ease;
+  width: max-content;
+}
+
+.cs-toc:hover .cs-toc-list { background-color: var(--navy-blue); }
+
+.cs-toc-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  background: none;
+  box-shadow: none;
+}
+
+.cs-toc-pip {
+  display: block;
+  flex-shrink: 0;
+  width: 2px;
+  height: 8px;
+  background-color: var(--sapphire);
+  border: none;
+  outline: none;
+  transition: background-color 0.2s ease;
+}
+
+.cs-toc-link.is-active .cs-toc-pip { background-color: var(--chartreuse); }
+
+.cs-toc-label {
+  font-family: "Arsenal SC", sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--grey-olive);
+  white-space: nowrap;
+  opacity: 0;
+  max-width: 0;
+  overflow: hidden;
+  pointer-events: none;
+  transform: translateX(-6px);
+  transition: opacity 0.2s ease, transform 0.2s ease, max-width 0.2s ease, color 0.2s ease;
+}
+
+.cs-toc-link.is-active .cs-toc-label { color: var(--chartreuse); }
+
+.cs-toc:hover .cs-toc-label {
+  opacity: 1;
+  max-width: 200px;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+
+/* ─── ANIMATIONS ─── */
+@keyframes bob {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(6px); }
+}
+
+/* ═══════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════ */
+@media (max-width: 1023px) {
+  .cs-toc { display: none; }
+
+  .case-hero { height: 380px; }
+  .hero-content { padding: 2rem; }
+
+  .details-bar { padding: 0 2rem; grid-template-columns: 1fr 1fr; }
+  .detail-item { border-right: none; border-bottom: 1px solid rgba(255, 255, 255, 0.07); padding: 1.5rem 0; }
+  .detail-item:not(:first-child) { padding-left: 0; }
+  .detail-item:nth-child(odd) { padding-right: 1rem; }
+  .detail-item:nth-child(2n) { padding-left: 1rem; border-left: 1px solid rgba(255, 255, 255, 0.07); }
+  .detail-item:last-child { border-bottom: none; }
+
+  .case-content { padding: 4rem 2rem; }
+  .risk-card { grid-template-columns: 1fr; gap: 1.5rem; }
+  .image-grid { grid-template-columns: 1fr; }
+  .project-nav { padding: 2.5rem 2rem; }
+  .prototype-preview-img { max-height: 65vh; }
+}
+
+@media (max-width: 767px) {
+  .cs-split { grid-template-columns: 1fr; height: auto !important; min-height: unset !important; overflow: visible !important; }
+  .cs-split-text { height: auto !important; min-height: unset !important; max-height: none !important; overflow: visible !important; overflow-y: visible !important; padding: 2rem; }
+  .cs-split-image { height: auto !important; min-height: unset !important; max-height: none !important; overflow: visible !important; }
+  .cs-split-image img { width: 100%; height: auto !important; max-height: none !important; object-fit: contain; display: block; }
+
+  .page { min-height: unset !important; height: auto !important; overflow: visible !important; }
+
+  .fw-hero-gradient {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.98) 0%, rgba(0, 0, 0, 0.85) 40%, rgba(0, 0, 0, 0.75) 100%);
+  }
+  .fw-hero-content h1,
+  .fw-hero-content .hero-subtitle,
+  .fw-hero-content .hero-tags { text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8); }
+
+  .cs-text-section { padding: 2rem 1.5rem; }
+  .cs-phases { padding: 2rem 1.5rem; }
+  .cs-risks-band { padding: 2rem 1.5rem; }
+  .cs-outcomes { padding: 2rem 1.5rem; }
+  .outcomes-grid { grid-template-columns: 1fr; }
+
+  .cs-hero { flex-direction: column; align-items: center; height: auto; padding-top: 5rem; }
+  .cs-hero-content { order: 1; text-align: center; padding: 1.5rem 1.25rem 0; width: 100%; }
+  .cs-hero-content h1 { font-size: clamp(1.75rem, 8vw, 2.5rem); margin-bottom: 0.5rem; }
+  .cs-hero-content .hero-subtitle { margin-bottom: 0; }
+  .cs-hero-content .hero-tags { display: none; }
+  .cs-hero img { order: 2; width: 100%; height: auto; max-height: none; object-fit: cover; padding: 0; }
+  .hero-tags { order: 3; display: flex !important; flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 0.5rem; padding: 1rem 1.25rem 2rem; width: 100%; }
+
+  .prototype-preview-img { max-height: 55vh; }
+  .prototype-image-panel img { max-height: 50vh; }
+
+  .case-hero { height: 280px; }
+  .hero-content { padding: 1.5rem 1.25rem; }
+  .case-hero h1 { font-size: clamp(1.8rem, 7vw, 2.5rem); }
+  .hero-subtitle { font-size: 0.72rem; }
+  .hero-tags { gap: 0.3rem; }
+  .hero-tag { font-size: 0.6rem; padding: 0.15rem 0.5rem; }
+
+  .details-bar { padding: 0 1.25rem; grid-template-columns: 1fr; }
+  .detail-item { padding: 1.25rem 0; border-right: none; border-left: none !important; border-bottom: 1px solid rgba(255, 255, 255, 0.07); padding-left: 0 !important; padding-right: 0 !important; }
+  .detail-item:last-child { border-bottom: none; }
+
+  .case-content { padding: 2.5rem 1.25rem; }
+  .case-content h2 { font-size: clamp(1.4rem, 6vw, 1.8rem); }
+  .image-block { padding: 1.5rem; min-height: 160px; }
+  .highlight-box { padding: 1.5rem; }
+  .outcome-card { padding: 1.25rem; }
+  .reflection-block { padding: 1.5rem; }
+
+  .project-nav { padding: 2rem 1.25rem; flex-direction: column; align-items: center; gap: 1.5rem; text-align: center; }
+  .project-nav-item { text-align: center !important; }
+  .project-nav-item:first-child { text-align: left; }
+  .project-nav-item:last-child { text-align: right; }
+  .btn-all-projects { padding: 0.6rem 1rem; font-size: 0.7rem; white-space: nowrap; }
+}
+
+@media (min-width: 1440px) {
+  .body-text { font-size: 1.05rem; line-height: 1.85; }
+  .cs-split-text p { font-size: 1.05rem; line-height: 1.85; }
+  .detail-value { font-size: 0.95rem; }
+  .prototype-preview-img { max-height: 75vh; }
+  .cs-text-section h2,
+  .cs-split-text h2,
+  .cs-risks-band h2,
+  .cs-phases h2,
+  .cs-outcomes h2,
+  .reflection-block h2 { font-size: clamp(1.5rem, 2vw, 2rem); }
+}
+
+@media (min-width: 1920px) {
+  .hero-subtitle { font-size: 1.1rem; }
+  .hero-tag { font-size: 0.95rem; padding: 0.4rem 0.9rem; }
+  .body-text { font-size: 1.15rem; line-height: 1.9; }
+  .cs-split-text p { font-size: 1.15rem; line-height: 1.9; }
+  .cs-split-text { padding: 5rem; }
+  .cs-split-text li,
+  .cs-text-section li { font-size: 1.05rem; line-height: 1.85; }
+  .detail-value { font-size: 1rem; }
+  .detail-label { font-size: 0.8rem; }
+  .cs-root .section-label { font-size: 0.9rem; }
+  .risk-card h4 { font-size: 1.1rem; }
+  .risk-card p { font-size: 1rem; }
+  .cs-phase-item strong { font-size: 0.85rem; }
+  .cs-phase-item p { font-size: 1.05rem; line-height: 1.85; }
+  .outcome-card p { font-size: 1rem; line-height: 1.75; }
+}
+
+@media (min-width: 2560px) {
+  .hero-subtitle { font-size: 1.2rem; }
+  .hero-tag { font-size: 1rem; padding: 0.5rem 1rem; }
+  .body-text { font-size: 1.25rem; }
+  .cs-split-text p { font-size: 1.25rem; }
+  .cs-split-text { padding: 6rem; }
+  .detail-value { font-size: 1.1rem; }
+}

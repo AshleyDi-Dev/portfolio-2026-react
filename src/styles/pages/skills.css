@@ -1,0 +1,373 @@
+/* ═══════════════════════════════════════
+   SKILLS — scoped under .page-skills
+═══════════════════════════════════════ */
+
+/* PAGE HEADER */
+.page-skills .page-header {
+  padding: 10rem 4rem 5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  position: relative;
+  overflow: hidden;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-skills .page-header::before {
+  content: '';
+  position: absolute;
+  top: -100px; right: -100px;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(206,255,26,0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.page-skills .page-header h1 {
+  font-family: var(--ff-Montserrat);
+  font-weight: 900;
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  line-height: 1.05;
+  color: var(--off-white);
+  max-width: 700px;
+  margin-bottom: 1.5rem;
+}
+
+.page-skills .page-header h1 span { color: var(--sapphire); }
+
+.page-skills .page-header p {
+  font-size: 1rem;
+  color: var(--grey-olive);
+  max-width: 560px;
+  line-height: 1.75;
+  font-weight: 300;
+}
+
+/* TAB TOGGLE */
+.page-skills .tab-section {
+  padding: 0 4rem;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  position: sticky;
+  top: 73px;
+  background-color: var(--palm-leaf);
+  backdrop-filter: blur(12px);
+  z-index: 50;
+}
+
+.page-skills .tab-toggle {
+  display: flex;
+  gap: 0;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-skills .tab-btn {
+  font-family: 'Arsenal SC', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 1.25rem 2.5rem;
+  background: transparent;
+  color: var(--off-white);
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: -1px;
+}
+
+.page-skills .tab-btn.active {
+  color: var(--off-white);
+  border-bottom-color: var(--chartreuse);
+}
+
+.page-skills .tab-btn:hover { color: var(--off-white); }
+
+/* SKILLS TAB */
+.page-skills .skills-tab {
+  padding: 5rem 4rem;
+  background-color: var(--grey-olive);
+}
+
+.page-skills .skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-skills .skill-cluster {
+  background: var(--off-white);
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 3rem;
+  transition: background 0.3s;
+  animation: fadeUp 0.6s ease both;
+}
+
+.page-skills .skill-cluster:hover { background: rgba(255,255,255,0.05); }
+
+.page-skills .skill-cluster:nth-child(1) { animation-delay: 0.1s; }
+.page-skills .skill-cluster:nth-child(2) { animation-delay: 0.2s; }
+.page-skills .skill-cluster:nth-child(3) { animation-delay: 0.3s; }
+.page-skills .skill-cluster:nth-child(4) { animation-delay: 0.4s; }
+
+.page-skills .cluster-number {
+  font-family: var(--ff-Montserrat);
+  font-weight: 900;
+  font-size: 3rem;
+  color: color-mix(in srgb, var(--sapphire) 50%, transparent);
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.page-skills .cluster-title {
+  font-family: 'Arsenal SC', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--jet-black);
+  margin-bottom: 0.25rem;
+}
+
+.page-skills .cluster-accent {
+  display: block;
+  width: 2rem;
+  height: 2px;
+  background: var(--sapphire);
+  margin-bottom: 1.25rem;
+}
+
+.page-skills .cluster-desc {
+  font-size: 0.875rem;
+  line-height: 1.75;
+  color: var(--palm-leaf);
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+
+.page-skills .skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.page-skills .skill-tag {
+  font-family: 'Arsenal SC', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--jet-black);
+  border: 1px solid rgba(170,169,90,0.3);
+  padding: 0.25rem 0.65rem;
+  transition: all 0.2s;
+}
+
+.page-skills .skill-tag:hover {
+  border-color: var(--palm-leaf);
+  color: var(--sapphire);
+}
+
+.page-skills .skill-tag.highlight {
+  color: var(--chartreuse);
+  border-color: rgba(206,255,26,0.3);
+}
+
+/* TOOLS TAB (visibility React-controlled) */
+.page-skills .tools-tab {
+  padding: 5rem 4rem;
+  background-color: var(--grey-olive);
+}
+
+.page-skills .tools-category {
+  margin-bottom: 4rem;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-skills .tools-category-label {
+  font-family: 'Arsenal SC', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--jet-black);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.page-skills .tools-category-label::before {
+  content: '';
+  display: block;
+  width: 2rem;
+  height: 1px;
+  background: var(--jet-black);
+}
+
+.page-skills .tools-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2px;
+}
+
+.page-skills .tool-item {
+  background: var(--off-white);
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 1.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: default;
+  transition: all 0.2s;
+}
+
+.page-skills .tool-item:hover {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(77,97,244,0.4);
+}
+
+.page-skills .tool-icon {
+  width: 36px;
+  height: 36px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.page-skills .tool-icon img {
+  width: 26px;
+  height: 26px;
+  display: block;
+}
+
+.page-skills .tool-name {
+  font-family: 'Arsenal SC', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--jet-black);
+  text-align: center;
+}
+
+/* CTA */
+.page-skills .skills-cta {
+  padding: 5rem 4rem;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-skills .skills-cta-left h2 {
+  font-family: var(--ff-Montserrat);
+  font-weight: 900;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  color: var(--off-white);
+  margin-bottom: 0.75rem;
+  line-height: 1.1;
+}
+
+.page-skills .skills-cta-left h2 span { color: var(--sapphire); }
+
+.page-skills .skills-cta-left p {
+  font-size: 0.95rem;
+  color: var(--grey-olive);
+  font-weight: 300;
+  max-width: 400px;
+  line-height: 1.7;
+}
+
+.page-skills .cta-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+/* BUTTONS (skills variant — borderless primary / faint secondary) */
+.page-skills .btn-primary {
+  font-family: 'Arsenal SC', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: var(--sapphire);
+  color: white;
+  border: none;
+  padding: 0.9rem 2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.page-skills .btn-primary:hover {
+  background: var(--chartreuse);
+  color: var(--jet-black);
+}
+
+.page-skills .btn-secondary {
+  font-family: 'Arsenal SC', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--off-white);
+  border: 1px solid rgba(255,255,255,0.25);
+  padding: 0.9rem 2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.page-skills .btn-secondary:hover {
+  border-color: var(--chartreuse);
+  color: var(--chartreuse);
+}
+
+/* RESPONSIVE — SKILLS */
+@media (max-width: 1023px) {
+  .page-skills .page-header { padding: 8rem 2rem 4rem; }
+  .page-skills .tab-section { padding: 0 2rem; top: 60px; }
+  .page-skills .skills-tab { padding: 4rem 2rem; }
+  .page-skills .skills-grid { grid-template-columns: 1fr; }
+  .page-skills .tools-tab { padding: 4rem 2rem; }
+  .page-skills .tools-grid { grid-template-columns: repeat(4, 1fr); }
+  .page-skills .skills-cta { padding: 4rem 2rem; flex-direction: column; align-items: flex-start; gap: 2rem; }
+  .page-skills .cta-buttons { flex-direction: row; }
+}
+
+@media (max-width: 767px) {
+  .page-skills .page-header { padding: 6rem 1.25rem 3rem; }
+  .page-skills .page-header h1 { font-size: clamp(1.8rem, 7vw, 2.8rem); }
+  .page-skills .tab-section { padding: 0 1.25rem; }
+  .page-skills .tab-btn { padding: 1rem 1.25rem; font-size: 0.75rem; }
+  .page-skills .skills-tab { padding: 2.5rem 1.25rem; }
+  .page-skills .skill-cluster { padding: 2rem 1.5rem; }
+  .page-skills .tools-tab { padding: 2.5rem 1.25rem; }
+  .page-skills .tools-grid { grid-template-columns: repeat(3, 1fr); }
+  .page-skills .tool-item { padding: 1.25rem 0.75rem; }
+  .page-skills .skills-cta { padding: 3rem 1.25rem; }
+  .page-skills .cta-buttons { flex-direction: column; width: 100%; }
+  .page-skills .btn-primary, .page-skills .btn-secondary { text-align: center; width: 100%; }
+}
+
+@media (min-width: 1920px) {
+  .page-skills .cluster-desc { font-size: 1rem; line-height: 1.85; }
+  .page-skills .tool-name { font-size: 0.75rem; }
+  .page-skills .tab-btn { font-size: 0.95rem; }
+}
+
+@media (min-width: 2560px) {
+  .page-skills .cluster-desc { font-size: 1.1rem; }
+}

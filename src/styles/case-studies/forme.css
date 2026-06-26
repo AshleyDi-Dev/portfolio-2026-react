@@ -1,0 +1,226 @@
+/* ═══════════════════════════════════════
+   FORME — per-study overrides
+═══════════════════════════════════════ */
+
+/* PAGE 1 — HERO (jet-black) */
+.forme-page-hero { background: var(--jet-black); justify-content: space-between; }
+.forme-hero-tags { margin-top: 1.25rem; margin-bottom: 0; }
+.forme-hero-placeholder {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #1a1f2e 0%, #0f1318 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.6;
+}
+.forme-hero-placeholder span {
+  font-family: "Arsenal SC", sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.2);
+}
+
+/* PAGE 2 — OVERVIEW (off-white) */
+.forme-overview-page { background: var(--off-white); }
+.forme-overview-page .section-label { color: var(--sapphire); }
+.forme-overview-page h2 { color: var(--jet-black); }
+.forme-overview-page h2 span { color: var(--sapphire); }
+.forme-overview-page .body-text { color: var(--jet-black); }
+
+/* PAGE 3 — OPPORTUNITY (palm-leaf) */
+.forme-opportunity-page { background: var(--palm-leaf); }
+.forme-opportunity-page .section-label { color: var(--chartreuse); }
+.forme-opportunity-page h2 { color: var(--off-white); }
+.forme-opportunity-page h2 span { color: var(--chartreuse); }
+.forme-opportunity-page .cs-split-text p { color: var(--off-white); }
+.forme-callout {
+  margin-top: 1.25rem;
+  padding: 1rem 1.25rem;
+  border-left: 3px solid var(--chartreuse);
+  font-style: italic;
+  color: rgba(255,255,255,0.8) !important;
+}
+
+/* PAGE 4 — HYPOTHESIS (off-white) */
+.forme-hypothesis-page { background: var(--off-white); }
+.forme-hypothesis-page .section-label { color: var(--sapphire); }
+.forme-hypothesis-page h2 { color: var(--jet-black); }
+.forme-hypothesis-page h2 span { color: var(--sapphire); }
+.forme-hypothesis-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 2rem; }
+.forme-hypothesis-card { padding: 2.5rem; display: flex; flex-direction: column; gap: 1rem; }
+.forme-hypothesis-card--product { background: var(--sapphire); }
+.forme-hypothesis-card--process { background: var(--navy-blue); }
+.forme-hypothesis-label {
+  font-family: "Arsenal SC", sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--chartreuse);
+}
+.forme-hypothesis-card p { font-size: 0.95rem; line-height: 1.8; color: var(--off-white); font-weight: 300; }
+
+/* PAGE 5 — APPROACH (jet-black) */
+.forme-approach-page { background: var(--jet-black); }
+.forme-approach-page .section-label { color: var(--chartreuse); }
+.forme-approach-page h2 { color: var(--off-white); }
+.forme-approach-page h2 span { color: var(--chartreuse); }
+.forme-approach-page .cs-split-text p { color: var(--grey-olive); }
+
+/* PAGE 6 — KEY DECISIONS (off-white) */
+.forme-decisions-page { background: var(--off-white); }
+.forme-decisions-band { background: transparent; }
+.forme-decisions-page .section-label { color: var(--sapphire); }
+.forme-decisions-page h2 { color: var(--jet-black); }
+.forme-decisions-page h2 span { color: var(--sapphire); }
+.forme-decisions-page .risk-section-title { color: var(--sapphire); }
+.forme-decisions-page .risk-card { border-color: rgba(92,102,127,0.3); }
+.forme-decisions-page .risk-card h4 { color: var(--jet-black); }
+.forme-decisions-page .risk-card p { color: var(--palm-leaf); }
+
+/* PAGE 7 — THE EXPERIMENT (grey-olive) */
+.forme-experiment-page { background: var(--grey-olive); }
+.forme-experiment-page .section-label { color: var(--chartreuse); }
+.forme-experiment-page h2 { color: var(--off-white); }
+.forme-experiment-page h2 span { color: var(--sapphire); }
+.forme-experiment-page .cs-split-text p { color: var(--grey-olive); }
+.forme-stats-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(0,0,0,0.12);
+}
+.forme-stat-item { display: flex; flex-direction: column; }
+.forme-stat-number { font-family: var(--ff-Montserrat); font-weight: 900; font-size: 3rem; color: var(--sapphire); line-height: 1; }
+.forme-stat-label { font-size: 0.9rem; color: var(--grey-olive); margin-top: 0.25rem; }
+.forme-experiment-page .prototype-link { color: var(--off-white); background-color: var(--sapphire); border-color: var(--sapphire); }
+.forme-experiment-page .prototype-link:hover { color: var(--jet-black); background-color: var(--chartreuse); border-color: var(--chartreuse); }
+
+/* PAGE 8 — HONEST RESULTS (palm-leaf) */
+.forme-results-page { background: var(--palm-leaf); }
+.forme-results-page .section-label { color: var(--chartreuse); }
+.forme-results-page h2 { color: var(--off-white); }
+.forme-results-page h2 span { color: var(--chartreuse); }
+.forme-results-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 2rem; }
+.forme-results-col { padding: 2.5rem; display: flex; flex-direction: column; gap: 1.25rem; }
+.forme-results-col--worked { background: rgba(255,255,255,0.06); border-top: 2px solid var(--chartreuse); }
+.forme-results-col--didnt { background: rgba(0,0,0,0.12); border-top: 2px solid rgba(255,255,255,0.2); }
+.forme-results-label {
+  font-family: "Arsenal SC", sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--chartreuse);
+}
+.forme-results-col--didnt .forme-results-label { color: var(--grey-olive); }
+
+/* PAGE 9 — WHAT COMES NEXT (jet-black) */
+.forme-next-page { background: var(--jet-black); }
+.forme-next-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 4rem 5vw;
+  box-sizing: border-box;
+  text-align: center;
+}
+.forme-next-label { margin-bottom: 0.75rem; }
+.forme-next-heading { font-family: var(--ff-Montserrat); font-weight: 900; color: var(--off-white); margin: 0 0 1rem; max-width: 700px; }
+.forme-next-heading span { color: var(--chartreuse); }
+.forme-next-intro {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1rem;
+  color: var(--grey-olive);
+  line-height: 1.75;
+  max-width: 620px;
+  margin: 0 0 1rem;
+}
+.forme-next-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1000px;
+  text-align: left;
+  margin-top: 2.5rem;
+}
+.forme-next-card { padding: 1.5rem; background: transparent; display: flex; flex-direction: column; gap: 0.75rem; }
+.forme-next-card--sapphire { border-top: 2px solid var(--sapphire); }
+.forme-next-card--chartreuse { border-top: 2px solid var(--chartreuse); }
+.forme-next-card--muted { border-top: 2px solid rgba(255,255,255,0.2); }
+.forme-next-title {
+  font-family: "Arsenal SC", sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin: 0;
+}
+.forme-next-title--sapphire { color: var(--sapphire); }
+.forme-next-title--chartreuse { color: var(--chartreuse); }
+.forme-next-title--muted { color: var(--off-white); }
+.forme-next-copy { font-family: "DM Sans", sans-serif; font-size: 0.9rem; color: var(--grey-olive); line-height: 1.75; margin: 0; }
+
+/* PAGE 10 — REFLECTION (palm-leaf) */
+.forme-reflection-page { justify-content: space-between; }
+.forme-reflection-section { flex: 1; background: var(--palm-leaf); }
+.forme-reflection-section p { color: var(--off-white); }
+.forme-reflection-section p + p { margin-top: 1.25rem; }
+
+/* SHARED — IMAGE PANELS */
+.forme-image-panel { display: flex; align-items: center; justify-content: center; background: transparent; padding: 2rem; }
+.forme-placeholder-panel {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  background: rgba(255,255,255,0.04);
+  border: 1px dashed rgba(255,255,255,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.forme-placeholder-panel span {
+  font-family: "Arsenal SC", sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.2);
+  text-align: center;
+  padding: 1rem;
+}
+
+/* SHARED — LISTS */
+.forme-list {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.9rem;
+  color: var(--grey-olive);
+  line-height: 1.75;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.forme-list strong { color: var(--off-white); font-weight: 500; }
+.forme-results-col .forme-list { color: var(--off-white); }
+
+/* RESPONSIVE */
+@media (max-width: 1023px) {
+  .forme-hypothesis-grid { grid-template-columns: 1fr; }
+  .forme-results-grid { grid-template-columns: 1fr; }
+  .forme-next-grid { grid-template-columns: 1fr; }
+  .forme-next-wrap { padding: 4rem 2rem; }
+}
+
+@media (max-width: 767px) {
+  .forme-hypothesis-card { padding: 1.75rem; }
+  .forme-results-col { padding: 1.75rem; }
+  .forme-next-wrap { padding: 3rem 1.25rem; text-align: left; align-items: flex-start; }
+  .forme-next-grid { grid-template-columns: 1fr; margin-top: 1.5rem; }
+  .forme-reflection-section p + p { margin-top: 1rem; }
+  .forme-placeholder-panel { min-height: 180px; }
+}

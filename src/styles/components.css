@@ -1,0 +1,59 @@
+/* ═══════════════════════════════════════
+   SHARED PRIMITIVES
+   Identical across the standard pages, so defined once here.
+   (Case-study variants are scoped under .cs-root in case-study.css.)
+═══════════════════════════════════════ */
+
+/* Section label — eyebrow with leading rule (standard pages) */
+.section-label {
+  font-family: 'Arsenal SC', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--palm-leaf);
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.section-label::before {
+  content: '';
+  display: block;
+  width: 2rem;
+  height: 1px;
+  background: var(--palm-leaf);
+}
+
+.section-label--chartreuse {
+  color: var(--chartreuse);
+  margin-bottom: 1rem;
+}
+
+.section-label--chartreuse::before {
+  background: var(--chartreuse);
+}
+
+/* Page label — chartreuse eyebrow used in page headers/heroes */
+.page-label {
+  font-family: 'Arsenal SC', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--chartreuse);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.page-label::before {
+  content: '';
+  display: block;
+  width: 2rem;
+  height: 1px;
+  background: var(--chartreuse);
+}
+
+/* Utility */
+.hidden { display: none !important; }

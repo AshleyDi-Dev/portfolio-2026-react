@@ -1,0 +1,113 @@
+/* ═══════════════════════════════════════
+   LA NOTTE — per-study overrides
+═══════════════════════════════════════ */
+
+/* PAGE 1 — HERO (jet-black) */
+.lanotte-page-hero { background: var(--jet-black); justify-content: space-between; }
+.lanotte-hero-section { flex: 1; }
+.lanotte-hero-tags { margin-top: 1.25rem; margin-bottom: 0; }
+
+/* PAGE 2 — OVERVIEW (off-white) */
+.lanotte-overview-page { background: var(--off-white); padding-top: 4rem; padding-bottom: 1rem; }
+.lanotte-overview-page .cs-split-text { background: transparent; }
+.lanotte-overview-page .section-label { color: var(--sapphire); }
+.lanotte-overview-page h2 { color: var(--jet-black); }
+.lanotte-overview-page h2 span { color: var(--sapphire); }
+.lanotte-overview-page .cs-split-text p { color: var(--jet-black); }
+.lanotte-overview-page .cs-split-text p strong { color: var(--sapphire); }
+.lanotte-overview-page .lanotte-image-panel { background: transparent; }
+
+/* PAGE 3 — PLANNING (palm-leaf) */
+.lanotte-planning-page { background: var(--palm-leaf); padding-top: 4rem; padding-bottom: 1rem; }
+.lanotte-planning-page .cs-split-text { background: transparent; }
+.lanotte-planning-page .section-label { color: var(--chartreuse); }
+.lanotte-planning-page h2 { color: var(--off-white); }
+.lanotte-planning-page h2 span { color: var(--chartreuse); }
+.lanotte-planning-page .cs-split-text p { color: var(--off-white); }
+.lanotte-planning-page .lanotte-image-panel { background: transparent; }
+
+/* PAGE 4 — RISKS (jet-black) */
+.lanotte-risks-page { background: var(--jet-black); }
+.lanotte-risks-page .section-label { color: var(--chartreuse); }
+.lanotte-risks-page h2 { color: var(--off-white); }
+.lanotte-risks-page h2 span { color: var(--chartreuse); }
+.lanotte-risks-page .risk-section-title { color: var(--chartreuse); }
+.lanotte-risks-page .risk-card h4 { color: var(--off-white); }
+.lanotte-risks-page .risk-card p { color: var(--off-white); }
+
+/* PAGE 5 — PHASE BREAKDOWN (off-white) */
+.lanotte-phase-page { background: var(--off-white); }
+.lanotte-phase-page .section-label { color: var(--sapphire); }
+.lanotte-phase-page h2 { color: var(--jet-black); }
+.lanotte-phase-page h2 span { color: var(--sapphire); }
+.lanotte-phase-page .body-text { color: var(--jet-black); }
+.lanotte-phase-page .cs-phase-list { border-left-color: var(--sapphire); }
+.lanotte-phase-page .cs-phase-item::before { background: var(--sapphire); }
+.lanotte-phase-page .cs-phase-item strong { color: var(--sapphire); }
+.lanotte-phase-page .cs-phase-item p { color: var(--jet-black); }
+
+/* PAGE 6 — PROCESS / OUTCOMES (jet-black) */
+.lanotte-process-page { background: var(--jet-black); }
+.lanotte-process-page .cs-outcomes { background: transparent; }
+.lanotte-process-page .section-label { color: var(--chartreuse); }
+.lanotte-process-page h2 { color: var(--off-white); }
+.lanotte-process-page h2 span { color: var(--chartreuse); }
+.lanotte-process-page .outcome-card p { color: var(--off-white); }
+.lanotte-process-page .outcome-card p strong { color: var(--off-white); }
+
+/* PAGE 7 — USER FLOW + PROTOTYPE (off-white) */
+.lanotte-flow-page { background: var(--off-white); padding-top: 4rem; padding-bottom: 1rem; }
+.lanotte-flow-page .prototype-image-panel {
+  background: var(--jet-black);
+  margin-top: -4rem;
+  margin-bottom: -1rem;
+  padding-top: 4rem;
+  padding-bottom: 1rem;
+}
+.lanotte-flow-page .cs-split-text { background: transparent; }
+.lanotte-flow-page .section-label { color: var(--sapphire); }
+.lanotte-flow-page h2 { color: var(--jet-black); }
+.lanotte-flow-page h2 span { color: var(--sapphire); }
+.lanotte-flow-page .cs-split-text p { color: var(--jet-black); }
+.lanotte-flow-page .prototype-link { color: var(--off-white); background-color: var(--sapphire); }
+.lanotte-flow-page .prototype-link:hover { color: var(--jet-black); background-color: var(--chartreuse); }
+
+/* PAGE 8 — REFLECTION (jet-black) */
+.lanotte-reflection-page { background: var(--jet-black); justify-content: space-between; }
+.lanotte-reflection-section { flex: 1; background: var(--palm-leaf); }
+.lanotte-reflection-section p { color: var(--off-white); }
+
+/* UTILITIES */
+.lanotte-full-height { height: 100%; }
+
+/* IMAGE PANEL */
+.lanotte-image-panel { padding: 2rem; background: transparent; }
+.lanotte-image-panel img { width: 100%; height: auto; display: block; }
+
+/* USER FLOW IMAGES */
+.user-flow-images { display: flex; gap: 1rem; margin-top: 1.5rem; }
+.user-flow-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.user-flow-column img { width: 100%; max-width: 380px; display: block; }
+
+/* PROJECT NAV */
+.project-nav-item--right { text-align: right; }
+
+/* RESPONSIVE */
+@media (max-width: 767px) {
+  .user-flow-images { flex-direction: column; }
+  .lanotte-planning-page .cs-split { display: flex; flex-direction: column; }
+  .lanotte-planning-page .cs-split-image { order: 2; }
+  .lanotte-planning-page .cs-split-text { order: 1; }
+  .lanotte-flow-page .prototype-image-panel { margin-top: 0; padding-top: 2rem; padding-bottom: 2rem; }
+  .lanotte-risks-page .cs-risks-band { padding: 2rem 1.25rem; }
+  .lanotte-risks-page .risk-card { padding: 1.25rem; }
+  .lanotte-risks-page .cs-risks-band h2 { text-align: left; }
+  .lanotte-risks-page .cs-risks-band .section-label { text-align: left; }
+}

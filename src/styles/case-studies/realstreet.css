@@ -1,0 +1,116 @@
+/* ═══════════════════════════════════════
+   REAL STREET — per-study overrides
+═══════════════════════════════════════ */
+
+/* PAGE 1 — HERO (jet-black) */
+.realstreet-page-hero { background: var(--jet-black); justify-content: space-between; }
+.realstreet-hero-section { flex: 1; }
+.realstreet-hero-tags { margin-top: 1.25rem; margin-bottom: 0; }
+
+/* PAGE 2 — OVERVIEW (off-white) */
+.realstreet-overview-page { background: var(--off-white); padding-top: 4rem; padding-bottom: 1rem; }
+.realstreet-overview-page .cs-split-text { background: transparent; }
+.realstreet-overview-page .cs-split-image { background: transparent; }
+.realstreet-overview-page .section-label { color: var(--sapphire); }
+.realstreet-overview-page h2 { color: var(--jet-black); }
+.realstreet-overview-page h2 span { color: var(--sapphire); }
+.realstreet-overview-page .cs-split-text p { color: var(--jet-black); }
+.realstreet-overview-page .cs-split-text p strong { color: var(--sapphire); }
+
+/* PAGE 3 — CHALLENGE (palm-leaf) */
+.realstreet-challenge-page { background: var(--palm-leaf); }
+.realstreet-challenge-page .section-label { color: var(--chartreuse); }
+.realstreet-challenge-page h2 { color: var(--off-white); }
+.realstreet-challenge-page h2 span { color: var(--chartreuse); }
+.realstreet-challenge-page .body-text { color: var(--off-white); }
+
+/* PAGE 4 — RISKS (grey-olive) */
+.realstreet-risks-page { background: var(--grey-olive); }
+.realstreet-risks-page .section-label { color: var(--jet-black); }
+.realstreet-risks-page h2 { color: var(--jet-black); }
+.realstreet-risks-page h2 span { color: var(--sapphire); }
+.realstreet-risks-page .risk-section-title { color: var(--sapphire); }
+.realstreet-risks-page .risk-card h4 { color: var(--jet-black); }
+.realstreet-risks-page .risk-card p { color: var(--jet-black); }
+
+/* PAGE 5 — EXECUTION HIGHLIGHT (jet-black) */
+.realstreet-highlight-page { background: var(--jet-black); }
+.fw-highlight {
+  background: transparent;
+  padding: 5rem 5vw 4rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+.fw-highlight .section-label { margin-bottom: 0.75rem; }
+.fw-highlight > h2 { margin-bottom: 2rem; }
+.fw-highlight-box {
+  border-left: 3px solid var(--sapphire);
+  padding: 2rem 2.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  overflow-y: auto;
+}
+.fw-highlight-box h3 {
+  font-family: "Arsenal SC", sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--sapphire);
+  margin: 0 0 1rem;
+}
+.fw-highlight-box p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 1rem;
+}
+.fw-highlight-box p:last-child { margin-bottom: 0; }
+
+/* PAGE 6 — PRESS COVERAGE (palm-leaf) */
+.realstreet-press-page { background: var(--palm-leaf); }
+.fw-press {
+  background: transparent;
+  padding: 5rem 5vw 4rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+.fw-press .section-label { margin-bottom: 0.75rem; color: var(--chartreuse); }
+.fw-press > h2 { margin-bottom: 1rem; color: var(--off-white); }
+.fw-press > h2 span { color: var(--chartreuse); }
+.fw-press > p.body-text { margin-bottom: 1.5rem; color: var(--off-white); }
+.fw-press-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+.fw-press-grid img { width: 100%; height: auto; display: block; border-radius: 4px; }
+
+/* PAGE 7 — OUTCOMES (off-white) */
+.realstreet-outcomes-page { background: var(--off-white); }
+.realstreet-outcomes-page .cs-outcomes { background: transparent; }
+.realstreet-outcomes-page .section-label { color: var(--sapphire); }
+.realstreet-outcomes-page h2 { color: var(--jet-black); }
+.realstreet-outcomes-page h2 span { color: var(--sapphire); }
+.realstreet-outcomes-page .outcome-card { border: 1px solid var(--palm-leaf); }
+.realstreet-outcomes-page .outcome-card p { color: var(--jet-black); }
+.realstreet-outcomes-page .outcome-card p strong { color: var(--jet-black); }
+.realstreet-outcomes-page .outcome-dot { background: var(--sapphire); }
+
+/* PAGE 8 — REFLECTION (jet-black) */
+.realstreet-reflection-page { background: var(--jet-black); justify-content: space-between; }
+.realstreet-reflection-section { flex: 1; background: var(--palm-leaf); }
+.realstreet-reflection-section p { color: var(--off-white); }
+
+/* RESPONSIVE */
+@media (max-width: 767px) {
+  .fw-highlight-box {
+    height: auto !important;
+    min-height: unset !important;
+    max-height: none !important;
+    overflow: visible !important;
+    overflow-y: visible !important;
+  }
+  .fw-highlight { padding: 2rem 1.5rem; }
+  .fw-press { padding: 2rem 1.5rem; }
+  .fw-press-grid { grid-template-columns: 1fr; }
+  .realstreet-risks-page .cs-risks-band { padding: 2rem 1.25rem; }
+  .realstreet-risks-page .risk-card { padding: 1.25rem; }
+  .realstreet-risks-page .cs-risks-band h2 { text-align: left; }
+  .realstreet-risks-page .cs-risks-band .section-label { text-align: left; }
+}
