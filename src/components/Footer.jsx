@@ -1,4 +1,4 @@
-const RESUME = '/images/AshleyDiBuduo_APM_Resume_Portfolio.pdf'
+import { RESUME } from '../data/site.js'
 
 export default function Footer() {
   return (

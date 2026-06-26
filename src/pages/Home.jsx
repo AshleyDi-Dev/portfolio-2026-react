@@ -3,28 +3,28 @@ import Seo from '../components/Seo.jsx'
 import ProjectCard from '../components/ProjectCard.jsx'
 import { featured } from '../data/projects.js'
 
-const RESUME = '/images/AshleyDiBuduo_APM_Resume_Portfolio.pdf'
+import { RESUME } from '../data/site.js'
 
 export default function Home() {
   return (
     <div className="page-home">
       <Seo
-        title="Ashley DiBuduo | Associate Product Manager | Portfolio"
-        description="Creative Project Manager delivering structured, user-focused digital experiences. Explore product, UX, and web development work."
+        title="Ashley DiBuduo | Product Manager · AI & Automation | Portfolio"
+        description="Product manager and builder delivering user-focused digital products, AI workflows, and automation. Explore product, UX, and AI-assisted work."
         url="https://ashleydibuduo.ca"
-        ogTitle="Ashley DiBuduo | Associate Product Manager Portfolio"
-        ogDescription="Associate Product Manager portfolio bridging vision and execution through UX, web, and cross-functional delivery. Explore case studies and projects."
-        imageAlt="Ashley DiBuduo Product Manager Portfolio Preview"
-        twitterTitle="Ashley DiBuduo | Product Manager Portfolio"
-        twitterDescription="Product-focused portfolio showcasing UX, digital delivery, and cross-functional execution."
+        ogTitle="Ashley DiBuduo | Product Manager · AI & Automation"
+        ogDescription="Product manager and builder bridging vision and execution — through UX, AI workflows, automation, and cross-functional delivery. Explore case studies and projects."
+        imageAlt="Ashley DiBuduo Product & AI Portfolio Preview"
+        twitterTitle="Ashley DiBuduo | Product Manager · AI & Automation"
+        twitterDescription="Product-focused portfolio showcasing UX, AI workflows, automation, and cross-functional delivery."
       />
 
       {/* HERO */}
       <section className="hero">
         <div className="hero-left">
-          <span className="hero-label">Associate Product Manager</span>
+          <span className="hero-label">Product Manager · AI &amp; Automation</span>
           <h1>The gap between vision and <span>done?</span><br />That's where I live.</h1>
-          <p className="hero-sub">15 years in music and live events taught me one thing: you have to own the whole picture — the strategy, the details, the people, the pressure. I now apply this same approach to digital products. And I can build them myself too.</p>
+          <p className="hero-sub">15 years in music and live events taught me one thing: you have to own the whole picture — the strategy, the details, the people, the pressure. I now apply this same approach to digital products. And I can build them myself — coding it, automating it, and working with AI.</p>
           <div className="hero-ctas">
             <Link to="/projects" className="btn-primary">View My Work</Link>
             <Link to="/contact" className="btn-secondary">Let's Connect</Link>
@@ -60,7 +60,7 @@ export default function Home() {
           <div className="wsma-card">
             <div className="wsma-number">03</div>
             <div className="wsma-title">I've been building my technical skills with intention. </div>
-            <div className="wsma-text">Web development (HTML, CSS, JavaScript, React), UX design, and AI tools — because I don’t settle for knowing how to use something. I want to understand how it works. That drive improves every part of my work.</div>
+            <div className="wsma-text">Web development (HTML, CSS, JavaScript, React), UX design, and AI and automation tools — because I don’t settle for knowing how to use something. I want to understand how it works. That drive improves every part of my work.</div>
           </div>
         </div>
       </section>

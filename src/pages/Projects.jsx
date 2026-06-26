@@ -4,7 +4,7 @@ import Seo from '../components/Seo.jsx'
 import ProjectCard from '../components/ProjectCard.jsx'
 import { all, filterDescriptions } from '../data/projects.js'
 
-const RESUME = '/images/AshleyDiBuduo_APM_Resume_Portfolio.pdf'
+import { RESUME } from '../data/site.js'
 
 const FILTERS = [
   { key: 'all', label: 'All' },

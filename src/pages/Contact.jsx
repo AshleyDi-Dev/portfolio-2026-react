@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react'
 import Seo from '../components/Seo.jsx'
 
-const RESUME = '/images/AshleyDiBuduo_APM_Resume_Portfolio.pdf'
+import { RESUME } from '../data/site.js'
 const EMAIL = 'ashleydi.dev@gmail.com'
 const FORMSPREE = 'https://formspree.io/f/mreajdpn'
 

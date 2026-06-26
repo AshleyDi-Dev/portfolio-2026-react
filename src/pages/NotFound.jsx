@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import Seo from '../components/Seo.jsx'
 
-const RESUME = '/images/AshleyDiBuduo_APM_Resume_Portfolio.pdf'
+import { RESUME } from '../data/site.js'
 
 export default function NotFound() {
   return (

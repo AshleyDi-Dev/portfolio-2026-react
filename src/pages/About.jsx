@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import Seo from '../components/Seo.jsx'
 
-const RESUME = '/images/AshleyDiBuduo_APM_Resume_Portfolio.pdf'
+import { RESUME } from '../data/site.js'
 
 const TIMELINE = [
   {
@@ -25,9 +25,14 @@ const TIMELINE = [
     body: 'Working closely with developers to roll out new products and transform user feedback into improvements deepened my skills in technical communication, product iteration, and customer empathy. This was a pivotal experience for hands-on product development.',
   },
   {
-    years: '2024 – Now', tag: 'Current',
+    years: '2024 – Now', tag: 'Education',
     title: 'Web Development & Digital Delivery', subtitle: 'BCIT — New Media Design & Web Development',
     body: 'Building hands-on experience in front-end development, UX, and agentic tools—applying 15 years of delivery, leadership, and strategic skills to digital product creation. Expected completion July 2026.',
+  },
+  {
+    years: '2026 – Now', tag: 'Current',
+    title: 'AI Product & Automation', subtitle: 'Industry Internships — Wayfair · Roswell NYC',
+    body: 'As part of my program’s internship requirement, I took on two AI-focused placements: AI Agent Developer at Wayfair (via Extern), building automation workflows and a market-intelligence dashboard in n8n, and SEO/AEO Intern at Roswell NYC, building an LLM-powered knowledge base with Claude Code. Anthropic Claude AI Fluency certified.',
   },
 ]
 
@@ -36,11 +41,11 @@ export default function About() {
     <div className="page-about">
       <Seo
         title="About | Ashley DiBuduo"
-        description="Learn more about Ashley, a Vancouver-based Creative Project Manager with 15+ years in music, events, and digital product delivery."
+        description="Learn more about Ashley, a Vancouver-based product manager and builder with 15+ years in music and events, now building digital products, AI workflows, and automation."
         url="https://ashleydibuduo.ca/about.html"
-        ogDescription="Associate Product Manager with 15+ years leading cross-functional campaigns and media execution for live events, now focused on UX, web, and digital product delivery."
+        ogDescription="Product manager and builder with 15+ years leading cross-functional campaigns and live-event execution, now focused on product, UX, AI workflows, and automation."
         imageAlt="About Ashley DiBuduo"
-        twitterDescription="Product Manager with 15+ years in music, entertainment, and delivery."
+        twitterDescription="Product manager and builder with 15+ years in music and events, now working in product, UX, and AI."
       />
 
       {/* PAGE HERO */}

@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Seo from '../components/Seo.jsx'
 
-const RESUME = '/images/AshleyDiBuduo_APM_Resume_Portfolio.pdf'
+import { RESUME } from '../data/site.js'
 const ICON = (name) => `/images/tool-icons/${name}`
 
 const CLUSTERS = [
@@ -28,19 +28,19 @@ const CLUSTERS = [
     number: '04',
     title: 'Development & Technical Skills',
     desc: "I code with HTML, CSS, JavaScript, React, React Native, Tailwind CSS, GSAP, Express.js, SQL, and Git/GitHub. APIs and WordPress are in my toolkit. My technical fluency ensures I understand what's required from engineering.",
-    tags: ['HTML', 'CSS', 'JavaScript', 'React', 'React Native', 'Tailwind CSS', 'GSAP', 'Express.js', 'SQL', 'Git / GitHub', 'WordPress', 'APIs'],
+    tags: ['HTML', 'CSS', 'JavaScript', 'React', 'React Native', 'Tailwind CSS', 'GSAP', 'Express.js', 'SQL', 'Supabase', 'Vite', 'Git / GitHub', 'WordPress', 'APIs'],
   },
   {
     number: '05',
-    title: 'Agentic Coding & AI',
-    desc: 'I work with AI tools — Claude, ChatGPT, and others — as a real part of my process, not an afterthought. Brainstorming, iterating, pressure-testing ideas, shipping things that would otherwise take much longer to build. I treat them like a collaborator, not a crutch.',
-    tags: ['Claude', 'Agentic Coding', 'Generative AI', 'Automation', 'Workflow Optimization'],
+    title: 'AI & Automation',
+    desc: "AI is a core part of how I work and what I build — not an afterthought. I design agentic and multi-agent workflows, automate research and operations in n8n, and build with Claude Code: market-intelligence dashboards, a moodboard agent, and an LLM-powered knowledge base. I treat AI as a collaborator, with the prompt engineering and judgment to keep the output useful.",
+    tags: ['Claude', 'Claude Code', 'Agentic Workflows', 'Multi-Agent Systems', 'n8n', 'Workflow Automation', 'Prompt Engineering', 'LLM Integration', 'AI-Assisted Research', 'Gemini', 'Generative AI'],
   },
   {
     number: '06',
-    title: 'Marketing, Audience & Go-to-Market',
-    desc: "Before focusing on product development, I focused on reaching people. I've run campaigns, shaped content and social strategy, and worked on technical SEO. I've also built partnerships—identifying collaborators, making connections, and creating something greater together. This background helps me think about the product lifecycle, not just the build.",
-    tags: ['Content Strategy', 'Social Media Strategy', 'Technical SEO', 'Campaign Management', 'Audience Development', 'Partnership Developement', 'PR & Communications'],
+    title: 'Marketing, Growth & Discoverability',
+    desc: "Before focusing on product, I focused on reaching people. I've run campaigns, shaped content and social strategy, and worked across technical SEO and AEO — improving visibility in both traditional and AI-powered search. I've also built partnerships and go-to-market motions. This background helps me think about the full product lifecycle, not just the build.",
+    tags: ['SEO / AEO', 'Discoverability', 'Marketing Automation', 'Go-to-Market', 'Content Strategy', 'Social Media Strategy', 'Campaign Management', 'Audience Development', 'Partnership Development', 'PR & Communications'],
   },
 ]
 
@@ -60,11 +60,11 @@ export default function Skills() {
     <div className="page-skills">
       <Seo
         title="Skills | Ashley DiBuduo"
-        description="Explore my skills in product management, UX, front-end development, and cross-functional project delivery across digital and live experiences."
+        description="Explore my skills across product, UX, AI &amp; automation, front-end development, and cross-functional delivery — from research and strategy to agentic workflows and shipping."
         url="https://ashleydibuduo.ca/skills.html"
-        ogDescription="Skills in product management, UX, front-end development, and cross-functional delivery."
+        ogDescription="Skills across product, UX, AI &amp; automation, front-end development, and cross-functional delivery."
         imageAlt="Ashley DiBuduo Skills and Tools"
-        twitterDescription="Product, UX, and front-end development skills with a focus on execution and delivery."
+        twitterDescription="Product, UX, AI &amp; automation, and front-end development skills with a focus on execution and delivery."
       />
 
       {/* PAGE HEADER */}
@@ -115,6 +115,12 @@ export default function Skills() {
               <svg viewBox="0 0 32 32" width="26" height="26"><path fill="#4A154B" d="M6 6h20v20H6z" /><path fill="#fff" d="M12 10h2v8h-2zm4 4h2v4h-2zm-8 0h2v4H8zm12-4h2v8h-2z" /></svg>
             </ToolItem>
             <ToolItem name="Miro"><img src={ICON('miro-2.svg')} alt="Miro" /></ToolItem>
+            <ToolItem name="Jira">
+              <svg viewBox="0 0 32 32" width="26" height="26"><rect x="5" y="5" width="22" height="22" rx="5" fill="#2684FF" /><text x="16" y="21" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="13" fontWeight="700" fill="#fff">J</text></svg>
+            </ToolItem>
+            <ToolItem name="Obsidian">
+              <svg viewBox="0 0 32 32" width="26" height="26"><rect x="5" y="5" width="22" height="22" rx="5" fill="#7C3AED" /><text x="16" y="21" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="13" fontWeight="700" fill="#fff">O</text></svg>
+            </ToolItem>
           </div>
         </div>
 
@@ -124,6 +130,12 @@ export default function Skills() {
           <div className="tools-grid">
             <ToolItem name="Claude"><img src={ICON('claude-logo.svg')} alt="Claude" /></ToolItem>
             <ToolItem name="ChatGPT"><img src={ICON('chatgpt-4.svg')} alt="ChatGPT" /></ToolItem>
+            <ToolItem name="n8n">
+              <svg viewBox="0 0 32 32" width="26" height="26"><rect x="5" y="5" width="22" height="22" rx="5" fill="#EA4B71" /><text x="16" y="20" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="9" fontWeight="700" fill="#fff">n8n</text></svg>
+            </ToolItem>
+            <ToolItem name="Gemini">
+              <svg viewBox="0 0 32 32" width="26" height="26"><rect x="5" y="5" width="22" height="22" rx="5" fill="#4285F4" /><path fill="#fff" d="M16 9l1.6 4.4L22 15l-4.4 1.6L16 21l-1.6-4.4L10 15l4.4-1.6z" /></svg>
+            </ToolItem>
             <ToolItem name="Leonardo">
               <svg viewBox="0 0 32 32" width="26" height="26"><path fill="#7C3AED" d="M6 6h20v20H6z" /><path fill="#fff" d="M16 9l2 5h5l-4 3 2 5-5-3-5 3 2-5-4-3h5z" /></svg>
             </ToolItem>
@@ -170,6 +182,28 @@ export default function Skills() {
             </ToolItem>
             <ToolItem name="Supabase">
               <svg viewBox="0 0 32 32" width="26" height="26"><path fill="#3ECF8E" d="M16 4C9.37 4 4 9.37 4 16s5.37 12 12 12 12-5.37 12-12S22.63 4 16 4zm0 2c5.52 0 10 4.48 10 10S21.52 26 16 26 6 21.52 6 16 10.48 6 16 6z" /><path fill="#3ECF8E" d="M12 10l8 6-8 6V10z" /></svg>
+            </ToolItem>
+            <ToolItem name="Vercel">
+              <svg viewBox="0 0 32 32" width="26" height="26"><path fill="#000" d="M16 7l11 19H5z" /></svg>
+            </ToolItem>
+          </div>
+        </div>
+
+        {/* MARKETING & DISCOVERABILITY */}
+        <div className="tools-category">
+          <div className="tools-category-label">Marketing & Discoverability</div>
+          <div className="tools-grid">
+            <ToolItem name="Ahrefs">
+              <svg viewBox="0 0 32 32" width="26" height="26"><rect x="5" y="5" width="22" height="22" rx="5" fill="#054ADA" /><text x="16" y="21" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="13" fontWeight="700" fill="#fff">a</text></svg>
+            </ToolItem>
+            <ToolItem name="Semrush">
+              <svg viewBox="0 0 32 32" width="26" height="26"><rect x="5" y="5" width="22" height="22" rx="5" fill="#FF642D" /><text x="16" y="21" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="13" fontWeight="700" fill="#fff">S</text></svg>
+            </ToolItem>
+            <ToolItem name="Triple Whale">
+              <svg viewBox="0 0 32 32" width="26" height="26"><rect x="5" y="5" width="22" height="22" rx="5" fill="#1B9AAA" /><text x="16" y="20" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="9" fontWeight="700" fill="#fff">TW</text></svg>
+            </ToolItem>
+            <ToolItem name="Shopify">
+              <svg viewBox="0 0 32 32" width="26" height="26"><rect x="5" y="5" width="22" height="22" rx="5" fill="#95BF47" /><text x="16" y="21" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="13" fontWeight="700" fill="#fff">S</text></svg>
             </ToolItem>
           </div>
         </div>
