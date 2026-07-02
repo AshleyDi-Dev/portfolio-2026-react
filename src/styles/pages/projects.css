@@ -533,7 +533,7 @@
   .page-projects .page-header h1 { font-size: clamp(1.8rem, 7vw, 2.5rem); }
   .page-projects .filter-bar { padding: 0 1.25rem; top: 60px; }
   .page-projects .filter-tabs { overflow-x: visible; max-width: 100%; }
-  .page-projects .filter-btn { flex: 1; padding: 1rem 0.35rem; font-size: 0.7rem; letter-spacing: 0.1em; white-space: normal; text-align: center; overflow-wrap: break-word; }
+  .page-projects .filter-btn { flex: 1; padding: 1rem 0.5rem; font-size: 0.7rem; letter-spacing: 0.05em; white-space: normal; text-align: center; overflow-wrap: break-word; }
   .page-projects .projects-section { padding: 0 1.25rem 2rem; }
   .page-projects .filter-description { min-height: 6rem; }
   .page-projects .project-card { padding: 1.75rem; }
