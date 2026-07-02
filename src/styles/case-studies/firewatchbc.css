@@ -16,7 +16,7 @@
 .firewatch-overview-page h2 span { color: var(--sapphire); }
 .firewatch-overview-page .body-text { color: var(--jet-black); }
 .firewatch-overview-page .body-text strong { color: var(--sapphire); }
-.firewatch-overview-page .firewatch-kicker { color: var(--sapphire); }
+.firewatch-overview-page .firewatch-kicker { color: var(--sapphire); margin-top: 2rem; display: inline-block; }
 .firewatch-overview-page .firewatch-list { color: var(--jet-black); }
 
 /* PAGE 3 — HYPOTHESIS (palm-leaf) */
