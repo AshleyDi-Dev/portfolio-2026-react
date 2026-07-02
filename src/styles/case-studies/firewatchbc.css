@@ -16,6 +16,8 @@
 .firewatch-overview-page h2 span { color: var(--sapphire); }
 .firewatch-overview-page .body-text { color: var(--jet-black); }
 .firewatch-overview-page .body-text strong { color: var(--sapphire); }
+.firewatch-overview-page .firewatch-kicker { color: var(--sapphire); }
+.firewatch-overview-page .firewatch-list { color: var(--jet-black); }
 
 /* PAGE 3 — HYPOTHESIS (palm-leaf) */
 .firewatch-hypothesis-page { background: var(--palm-leaf); display: flex; flex-direction: column; }
@@ -56,7 +58,7 @@
   padding: 2rem;
   gap: 0.75rem;
 }
-.firewatch-sprint-image-panel img { max-width: 100%; max-height: 85%; object-fit: contain; }
+.firewatch-sprint-image-panel img { max-width: 100%; max-height: 70vh; object-fit: contain; }
 .firewatch-sprint-quote-wrap { margin: 1.5rem 0; padding: 1.25rem 1.5rem; border-left: 3px solid var(--chartreuse); background: transparent; }
 .firewatch-sprint-quote { font-family: "Arsenal SC", sans-serif; font-size: 1rem; color: var(--off-white); margin: 0; font-style: italic; }
 
@@ -127,6 +129,7 @@
   align-items: center;
   gap: 0.5rem;
 }
+.firewatch-results-card img { max-width: 100%; height: auto; }
 .firewatch-results-label {
   font-family: "Arsenal SC", sans-serif;
   font-size: 0.7rem;
@@ -236,7 +239,7 @@
 
 /* SHARED — IMAGE / CHART PANELS */
 .firewatch-image-panel { display: flex; align-items: center; justify-content: center; background: transparent; padding: 2rem; }
-.firewatch-image-panel img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.firewatch-image-panel img { max-width: 100%; max-height: 70vh; object-fit: contain; }
 .firewatch-chart-panel {
   background: transparent;
   display: flex;
@@ -246,7 +249,7 @@
   padding: 2rem;
   gap: 0.75rem;
 }
-.firewatch-chart-panel img { max-width: 100%; max-height: 85%; object-fit: contain; }
+.firewatch-chart-panel img { max-width: 100%; max-height: 70vh; object-fit: contain; }
 .firewatch-chart-caption-dark,
 .firewatch-chart-caption-light {
   font-family: "Arsenal SC", sans-serif;

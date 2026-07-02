@@ -94,7 +94,7 @@
   justify-content: center;
   gap: 0.5rem;
 }
-.user-flow-column img { width: 100%; max-width: 380px; display: block; }
+.user-flow-column img { width: 100%; max-width: 380px; height: auto; display: block; }
 
 /* PROJECT NAV */
 .project-nav-item--right { text-align: right; }

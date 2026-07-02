@@ -86,7 +86,21 @@ export default function FireWatchBC() {
             <div className="section-label">Overview</div>
             <h2>A real issue. <span>Real users.</span> Eight weeks to validate a solution.</h2>
             <p className="body-text">FireWatch BC is a mobile app concept for BC residents to quickly understand wildfire conditions, receive clear alerts, and know what actions to take in an emergency. We started with a broader natural disaster system but quickly focused on wildfires, enabling the project to be built and tested within 8 weeks. Scoping down early was a key PM decision.</p>
-            <p className="body-text">As Project Manager, I led a four-person team through an eight-week Lean UX sprint. <strong>What I owned:</strong> maintaining the product backlog, defining sprint themes, and setting weekly team focus; the research infrastructure — survey design, interview questions, task scenarios, and task cards; the journey map; all research documentation and findings synthesis; and the full round one usability testing plan, facilitation, and report. <strong>What was collaborative:</strong> ideation, research direction, and the MAZE validation test in round two, which a teammate led with my support.</p>
+            <p className="body-text">As Project Manager, I led a four-person team through an eight-week Lean UX sprint.</p>
+            <p><strong className="firewatch-kicker">What I owned</strong></p>
+            <ul className="firewatch-list firewatch-list-tight">
+              <li>Maintaining the product backlog, defining sprint themes, and setting weekly team focus</li>
+              <li>The research infrastructure — survey design, interview questions, task scenarios, and task cards</li>
+              <li>The journey map</li>
+              <li>All research documentation and findings synthesis</li>
+              <li>The full round one usability testing plan, facilitation, and report</li>
+            </ul>
+            <p><strong className="firewatch-kicker">What was collaborative</strong></p>
+            <ul className="firewatch-list firewatch-list-tight">
+              <li>Ideation</li>
+              <li>Research direction</li>
+              <li>The MAZE validation test in round two, which a teammate led with my support</li>
+            </ul>
             <p className="body-text">I spent the most time translating research — turning raw findings from surveys, interviews, and testing into clear, prioritized insights the team could act on.</p>
           </div>
         </div>

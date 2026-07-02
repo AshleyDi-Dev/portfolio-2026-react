@@ -60,12 +60,12 @@ export default function Projects() {
 
       {/* PROJECTS */}
       <section className="projects-section">
-        <div className={`filter-description${active === 'all' ? ' hidden' : ''}`}>
+        <div className="filter-description" key={active}>
           {active === 'all' ? '' : filterDescriptions[active]}
         </div>
         <div className="projects-grid">
           {all.map((p) => (
-            <ProjectCard key={p.to} {...p} showMeta hidden={!isVisible(p.category)} />
+            <ProjectCard key={`${active}-${p.to}`} {...p} showMeta hidden={!isVisible(p.category)} />
           ))}
 
           <div className="placeholder-card">
