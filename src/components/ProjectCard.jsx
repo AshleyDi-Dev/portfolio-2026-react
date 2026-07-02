@@ -18,11 +18,16 @@ export default function ProjectCard({
   showMeta = false,
   titleAs: TitleTag = 'h2',
   hidden = false,
+  cardBg,
+  imageFill = false,
 }) {
   return (
     <Link to={to} className={`project-card-link${hidden ? ' hidden' : ''}`}>
       <div className="project-card project-card-vertical">
-        <div className="project-card-image">
+        <div
+          className={`project-card-image${imageFill ? ' project-card-image--fill' : ''}`}
+          style={cardBg ? { backgroundColor: cardBg } : undefined}
+        >
           <img src={image} alt={alt} />
         </div>
         <div className="project-card-body">

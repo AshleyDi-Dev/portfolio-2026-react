@@ -20,6 +20,8 @@ import './styles/case-studies/forme.css'
 import './styles/case-studies/lanotte.css'
 import './styles/case-studies/realstreet.css'
 import './styles/case-studies/velvetroom.css'
+import './styles/case-studies/wayfair.css'
+import './styles/case-studies/knowledgedatabase.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

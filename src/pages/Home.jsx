@@ -35,7 +35,7 @@ export default function Home() {
             <div className="photo-bg-block"></div>
             <div className="photo-accent"></div>
             <div className="photo-placeholder">
-              <img src="/images/Headshot-square.png" alt="Ashley DiBuduo" />
+              <img src="/images/Headshot-square.png" width="868" height="1522" alt="Ashley DiBuduo" />
               <div className="photo-duotone"></div>
             </div>
             <span className="photo-label">Vancouver, BC</span>
@@ -49,8 +49,8 @@ export default function Home() {
         <div className="wsma-grid">
           <div className="wsma-card">
             <div className="wsma-number">01</div>
-            <div className="wsma-title">I always ask why.</div>
-            <div className="wsma-text">Why does this flow feel off? Why isn't this feature resonating? Why are users dropping here? This focus drives good UX — and it's how I approach everything, from the initial research conversation to the final design decision.</div>
+            <div className="wsma-title">I build with AI — not just alongside it.</div>
+            <div className="wsma-text">Two of my most recent projects — an AI agent system for Wayfair's Rugs team, and a self-initiated AI knowledge base now used department-wide — aren't proof I use AI tools. They're proof I design and ship systems with AI as the core architecture, not a productivity shortcut.</div>
           </div>
           <div className="wsma-card">
             <div className="wsma-number">02</div>
@@ -59,8 +59,8 @@ export default function Home() {
           </div>
           <div className="wsma-card">
             <div className="wsma-number">03</div>
-            <div className="wsma-title">I've been building my technical skills with intention. </div>
-            <div className="wsma-text">Web development (HTML, CSS, JavaScript, React), UX design, and AI and automation tools — because I don’t settle for knowing how to use something. I want to understand how it works. That drive improves every part of my work.</div>
+            <div className="wsma-title">I always ask why.</div>
+            <div className="wsma-text">Why does this flow feel off? Why isn't this feature resonating? Why are users dropping here? This focus drives good UX — and it's how I approach everything, from the initial research conversation to the final design decision, backed by hands-on web development (HTML, CSS, JavaScript, React) so I can build the answer, not just diagnose it.</div>
           </div>
         </div>
       </section>
@@ -76,7 +76,22 @@ export default function Home() {
         </div>
         <div className="projects-grid">
           {featured.map((p) => (
-            <ProjectCard key={p.to} {...p} titleAs="h3" />
+            p.comingSoon ? (
+              <div key="coming-soon" className="project-card project-card-vertical placeholder-card">
+                <div className="project-card-image placeholder-card-image">
+                  <span className="placeholder-icon">⚡</span>
+                </div>
+                <div className="project-card-body">
+                  <div className="project-card-top">
+                    <span className="project-tag placeholder-tag">{p.tag}</span>
+                    <h3 className="project-title">{p.title}</h3>
+                    <p className="project-desc">{p.desc}</p>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <ProjectCard key={p.to} {...p} titleAs="h3" />
+            )
           ))}
         </div>
       </section>

@@ -20,7 +20,7 @@ export default function RealStreet() {
         title="REAL Street Festival — Case Study"
         description="End-to-end project delivery for a large-scale music festival, managing media operations, stakeholders, and real-time execution."
         ogType="article"
-        url="https://ashleydibuduo.ca/casestudy-realstreet.html"
+        url="https://ashleydibuduo.ca/projects/casestudy-realstreet"
         ogTitle="REAL Street Festival Case Study | Ashley DiBuduo"
         ogDescription="Media operations and cross-team coordination for a large-scale hip-hop festival."
         image="https://ashleydibuduo.ca/images/og/casestudy-realstreetpreview.png"
@@ -33,7 +33,7 @@ export default function RealStreet() {
         {/* PAGE 1 — HERO + DETAILS BAR */}
         <div id="cs-pg1" className="page realstreet-page-hero">
           <section className="cs-hero">
-            <img src="/images/case-studies/RealStreet-Audience.png" alt="Audience, 40 thousand attendees" />
+            <img src="/images/case-studies/RealStreet-Audience.png" width="1402" height="784" alt="Audience, 40 thousand attendees" />
             <div className="cs-hero-gradient"></div>
             <div className="cs-hero-content">
               <h1>REAL Street <span>Festival</span></h1>
@@ -87,7 +87,7 @@ export default function RealStreet() {
               <p>The skills that made this work — anticipating failure points, creating structure in ambiguous environments, and aligning competing stakeholders around a shared outcome — are the same ones I bring to product work today.</p>
             </div>
             <div className="cs-split-image">
-              <img src="/images/case-studies/RealStreet-Admat.png" alt="Official Flyer / Admat" />
+              <img loading="lazy" src="/images/case-studies/RealStreet-Admat.png" width="479" height="638" alt="Official Flyer / Admat" />
             </div>
           </div>
         </div>
@@ -111,7 +111,7 @@ export default function RealStreet() {
               <div className="risk-card">
                 <div>
                   <div className="risk-section-title">Risk</div>
-                  <h4>Duplicated or Conflicting Media Outreach</h4>
+                  <h3>Duplicated or Conflicting Media Outreach</h3>
                   <p>Eight publicists pitching simultaneously across four teams with no centralized governance — competing narratives, overlapping pitches, damaged media relationships.</p>
                 </div>
                 <div>
@@ -127,7 +127,7 @@ export default function RealStreet() {
               <div className="risk-card">
                 <div>
                   <div className="risk-section-title">Risk</div>
-                  <h4>Last-Minute High-Security Access Requests</h4>
+                  <h3>Last-Minute High-Security Access Requests</h3>
                   <p>Artist access protocols controlled by individual management teams with no guaranteed same-day response window — layered approval structures with zero buffer time.</p>
                 </div>
                 <div>
@@ -143,7 +143,7 @@ export default function RealStreet() {
               <div className="risk-card">
                 <div>
                   <div className="risk-section-title">Risk</div>
-                  <h4>Artist-Specific Access Variability</h4>
+                  <h3>Artist-Specific Access Variability</h3>
                   <p>Each headliner operated under different rules for photo pits, backstage zones, video usage, and broadcast rights — and those rules could change same-day.</p>
                 </div>
                 <div>
@@ -180,10 +180,10 @@ export default function RealStreet() {
             <h2>The <span>proof</span> in the results.</h2>
             <p className="body-text">Media placements secured through coordinated outreach across all stakeholder teams.</p>
             <div className="fw-press-grid">
-              <img src="/images/case-studies/RealStreet-PressClip-1.png" alt="Forbes Headline" />
-              <img src="/images/case-studies/RealStreet-PressClip-2.png" alt="Billboard Headline" />
-              <img src="/images/case-studies/RealStreet-PressClip-3.png" alt="Complex Headline" />
-              <img src="/images/case-studies/RealStreet-PressClip-4.png" alt="Vibe Headline" />
+              <img loading="lazy" src="/images/case-studies/RealStreet-PressClip-1.png" width="2233" height="470" alt="Forbes Headline" />
+              <img loading="lazy" src="/images/case-studies/RealStreet-PressClip-2.png" width="976" height="470" alt="Billboard Headline" />
+              <img loading="lazy" src="/images/case-studies/RealStreet-PressClip-3.png" width="1704" height="470" alt="Complex Headline" />
+              <img loading="lazy" src="/images/case-studies/RealStreet-PressClip-4.png" width="1745" height="470" alt="Vibe Headline" />
             </div>
           </div>
         </div>
@@ -223,8 +223,8 @@ export default function RealStreet() {
           </div>
 
           <ProjectNav
-            prev={{ to: '/projects/casestudy-forme', title: 'Forme Styling App' }}
-            next={{ to: '/projects/casestudy-velvetroom', title: 'Velvet Room Website' }}
+            prev={{ to: '/projects/casestudy-lanotte', title: 'La Notte Brand & App Concept' }}
+            next={{ to: '/projects/casestudy-forme', title: 'Forme Styling App' }}
           />
           <Footer />
         </div>

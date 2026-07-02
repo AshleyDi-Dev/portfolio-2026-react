@@ -24,7 +24,7 @@ export default function FireWatchBC() {
         title="FireWatch BC — Case Study"
         description="Lean UX case study for a wildfire awareness app, featuring user research, prototyping, and iterative testing to validate solutions."
         ogType="article"
-        url="https://ashleydibuduo.ca/casestudy-firewatchbc.html"
+        url="https://ashleydibuduo.ca/projects/casestudy-firewatchbc"
         ogTitle="FireWatch BC Case Study | Ashley DiBuduo"
         ogDescription="A Lean UX mobile concept focused on wildfire awareness, alerts, and user-centered iteration."
         image="https://ashleydibuduo.ca/images/og/casestudy-firewatchpreview.png"
@@ -37,7 +37,7 @@ export default function FireWatchBC() {
         {/* PAGE 1 — HERO + DETAILS BAR */}
         <div id="cs-pg1" className="page firewatch-page-hero">
           <section className="cs-hero">
-            <img src="/images/case-studies/FirewatchBC-Hero.png" alt="FireWatch BC App Screens" />
+            <img src="/images/case-studies/FirewatchBC-Hero.png" width="3000" height="2201" alt="FireWatch BC App Screens" />
             <div className="cs-hero-gradient"></div>
             <div className="cs-hero-content">
               <h1>FireWatch BC <span>Wildfire App</span></h1>
@@ -102,7 +102,7 @@ export default function FireWatchBC() {
               <p className="firewatch-hypothesis-callout">Hypothesis: A reliable, clear, easy-to-use wildfire app that minimizes confusion for BC residents will result in quicker decision-making and response times during emergencies.</p>
             </div>
             <div className="cs-split-image firewatch-image-panel">
-              <img src="/images/case-studies/FireWatchBC-JourneyMap.png" alt="UX Artifact, User Journey Map" />
+              <img loading="lazy" src="/images/case-studies/FireWatchBC-JourneyMap.png" width="1303" height="1045" alt="UX Artifact, User Journey Map" />
             </div>
           </div>
         </div>
@@ -116,7 +116,7 @@ export default function FireWatchBC() {
               <div className="risk-card">
                 <div>
                   <div className="risk-section-title">Risk</div>
-                  <h4>Designing for High-Stress Emergency Scenarios</h4>
+                  <h3>Designing for High-Stress Emergency Scenarios</h3>
                   <p>During wildfires, time and stakes are high. Poor interface design isn’t frustrating—it’s dangerous. The app had to work for users under stress, not just in ideal conditions.</p>
                 </div>
                 <div>
@@ -131,7 +131,7 @@ export default function FireWatchBC() {
               <div className="risk-card">
                 <div>
                   <div className="risk-section-title">Risk</div>
-                  <h4>Limited Time for Iterative Design and Testing</h4>
+                  <h3>Limited Time for Iterative Design and Testing</h3>
                   <p>Our tight timeline demanded fast concepting and quick prototypes. Little room for iteration meant untested design decisions could embed usability issues too late to fix.</p>
                 </div>
                 <div>
@@ -146,7 +146,7 @@ export default function FireWatchBC() {
               <div className="risk-card">
                 <div>
                   <div className="risk-section-title">Risk</div>
-                  <h4>Feature Creep Against a Fixed MVP Scope</h4>
+                  <h3>Feature Creep Against a Fixed MVP Scope</h3>
                   <p>The team regularly suggested new features that, while reasonable individually, could have threatened the core experience and timeline with our tight MVP scope.</p>
                 </div>
                 <div>
@@ -182,7 +182,7 @@ export default function FireWatchBC() {
               <p>The clearest signal across all research: users don't want <em>more</em> information during an emergency — they want <em>less</em>, presented with a clear hierarchy and a clear prompt for what to do next. That insight drove every subsequent scope and prioritization decision.</p>
             </div>
             <div className="cs-split-image firewatch-chart-panel">
-              <img src="/images/case-studies/FirewatchBC-SurveyChart.png" alt="Survey Data Infographic" />
+              <img loading="lazy" src="/images/case-studies/FirewatchBC-SurveyChart.png" width="734" height="764" alt="Survey Data Infographic" />
               <span className="firewatch-chart-caption-dark">Survey Data</span>
             </div>
           </div>
@@ -192,7 +192,7 @@ export default function FireWatchBC() {
         <div id="cs-pg6" className="page fade-in firewatch-sprint-page">
           <div className="cs-split">
             <div className="cs-split-image firewatch-sprint-image-panel">
-              <img src="/images/case-studies/FirewatchBC-SprintTaskBreakdown.png" alt="Sprint-by-Sprint Task Breakdown Chart" />
+              <img loading="lazy" src="/images/case-studies/FirewatchBC-SprintTaskBreakdown.png" width="2861" height="1547" alt="Sprint-by-Sprint Task Breakdown Chart" />
               <span className="firewatch-chart-caption-light">Project tracking log — sprint themes and weekly task breakdown</span>
             </div>
             <div className="cs-split-text firewatch-sprint-text">
@@ -261,7 +261,7 @@ export default function FireWatchBC() {
             </div>
             <div className="cs-split-image firewatch-results-visuals">
               <div className="firewatch-results-card">
-                <img src="/images/case-studies/FireWatchBC-TrafficLightReport.png" alt="Traffic Light Report" />
+                <img loading="lazy" src="/images/case-studies/FireWatchBC-TrafficLightReport.png" width="1766" height="1136" alt="Traffic Light Report" />
               </div>
               <span className="firewatch-results-label">Traffic Light Report</span>
             </div>
@@ -273,11 +273,11 @@ export default function FireWatchBC() {
           <div className="cs-split">
             <div className="cs-split-image firewatch-maze-panel">
               <div className="firewatch-maze-column">
-                <img src="/images/case-studies/FireWatchBC-HeatMap1.png" alt="MAZE Heatmap Homescreen" />
+                <img loading="lazy" src="/images/case-studies/FireWatchBC-HeatMap1.png" width="854" height="1866" alt="MAZE Heatmap Homescreen" />
                 <span className="firewatch-maze-caption">MAZE Heatmap — Task 7</span>
               </div>
               <div className="firewatch-maze-column">
-                <img src="/images/case-studies/FireWatchBC-HeatMap2.png" alt="MAZE Heatmap Immediate Actions" />
+                <img loading="lazy" src="/images/case-studies/FireWatchBC-HeatMap2.png" width="882" height="1916" alt="MAZE Heatmap Immediate Actions" />
                 <span className="firewatch-maze-caption">MAZE Heatmap — Task 6</span>
               </div>
             </div>
@@ -320,7 +320,7 @@ export default function FireWatchBC() {
               </div>
             </div>
             <div className="cs-split-image prototype-image-panel">
-              <img src="/images/case-studies/FirewatchBC-prototypeimage.png" alt="Firewatch BC interactive prototype preview" />
+              <img loading="lazy" src="/images/case-studies/FirewatchBC-prototypeimage.png" width="968" height="1984" alt="Firewatch BC interactive prototype preview" />
               <a href="https://www.figma.com/proto/AMk89fdupqHoDqwhadFOkB/FireWatch-BC--Ashley-Copy---For-Portfolio-?node-id=1007-3185&scaling=scale-down&content-scaling=fixed&page-id=1007%3A3134&starting-point-node-id=1007%3A3185&hide-ui=1" target="_blank" rel="noopener noreferrer" className="prototype-link">
                 View Interactive Prototype ↗
               </a>
@@ -365,7 +365,7 @@ export default function FireWatchBC() {
           </div>
 
           <ProjectNav
-            prev={{ to: '/projects/casestudy-velvetroom', title: 'Velvet Room Website' }}
+            prev={{ to: '/projects/casestudy-knowledgedatabase', title: 'AI Knowledge Database' }}
             next={{ to: '/projects/casestudy-lanotte', title: 'La Notte Brand & App Concept' }}
           />
           <Footer />

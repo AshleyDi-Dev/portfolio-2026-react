@@ -30,7 +30,7 @@
 .realstreet-risks-page h2 { color: var(--jet-black); }
 .realstreet-risks-page h2 span { color: var(--sapphire); }
 .realstreet-risks-page .risk-section-title { color: var(--sapphire); }
-.realstreet-risks-page .risk-card h4 { color: var(--jet-black); }
+.realstreet-risks-page .risk-card h3 { color: var(--jet-black); }
 .realstreet-risks-page .risk-card p { color: var(--jet-black); }
 
 /* PAGE 5 — EXECUTION HIGHLIGHT (jet-black) */
@@ -54,7 +54,7 @@
   font-size: 0.8rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--sapphire);
+  color: var(--periwinkle);
   margin: 0 0 1rem;
 }
 .fw-highlight-box p {

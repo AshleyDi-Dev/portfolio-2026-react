@@ -1,7 +1,28 @@
-/* Project data. Home shows `featured` (3); Projects shows `all` (5) with filtering.
+/* Project data. Home shows `featured` (4); Projects shows `all` (7) with filtering.
    Copy is kept verbatim from the original pages (the two grids word differently). */
 
 export const featured = [
+  {
+    to: '/projects/casestudy-wayfair',
+    image: '/images/case-studies/ExternWayfair-Hero.jpg',
+    alt: 'Wayfair Rugs Market Intelligence Dashboard',
+    tag: 'AI & Automation',
+    title: 'Wayfair Rugs Market Intelligence',
+    desc: 'AI Agent Developer externship building 5 connected AI agents in n8n — turning market signals into a live dashboard Wayfair\'s Rugs team could act on.',
+    tools: ['AI Agents', 'n8n', 'Workflow Automation', 'Market Intelligence', 'Competitive Analysis'],
+    cardBg: 'var(--jet-black)',
+    imageFill: true,
+  },
+  {
+    to: '/projects/casestudy-knowledgedatabase',
+    image: '/images/case-studies/KnowledgeDatabase-Hero.png',
+    alt: 'Streamlined Knowledge Pipeline — conceptual diagram',
+    tag: 'AI & Automation',
+    title: 'AI Knowledge Database',
+    desc: 'A self-initiated AI knowledge system — an Obsidian memory and knowledge base paired with Claude Code that ingests fast-moving industry information, trust-weights each source, and now powers daily work across the department.',
+    tools: ['AI Knowledge Systems', 'Obsidian', 'Claude Code', 'Trust Scoring', 'Self-Initiated'],
+    cardBg: 'var(--jet-black)',
+  },
   {
     to: '/projects/casestudy-firewatchbc',
     image: '/images/case-studies/FirewatchBC-Hero.png',
@@ -10,6 +31,7 @@ export const featured = [
     title: 'FireWatch BC Wildfire App',
     desc: 'UX research and product delivery for a wildfire emergency app concept — managing sprint planning, project tracking, and usability testing across an 8-week Lean UX cycle to validate a design that works under pressure.',
     tools: ['Product Thinking', 'Lean UX', 'UX Research', 'Usability Testing', 'Scope & Prioritization'],
+    cardBg: '#C4C4C4',
   },
   {
     to: '/projects/casestudy-lanotte',
@@ -19,19 +41,38 @@ export const featured = [
     title: 'La Notte Restaurant App',
     desc: 'Waterfall delivery for a restaurant app concept — sequencing brand, product, and marketing across five phases while maintaining milestone visibility and absorbing a mid-project scope change without slipping the timeline.',
     tools: ['Product Definition', 'Waterfall Delivery', 'Scope & Planning', 'Gantt & WBS'],
-  },
-  {
-    to: '/projects/casestudy-forme',
-    image: '/images/case-studies/Forme-Hero.png',
-    alt: 'Forme App Screens',
-    tag: 'Product / Build',
-    title: 'Forme Styling App',
-    desc: 'AI-assisted MVP build for a personalized styling app — defining product structure, building core quiz flows, and developing a rule-based recommendations engine to quickly move from idea to a testable product.',
-    tools: ['Product Thinking', 'AI Workflow', 'MVP Development', 'React', 'Supabase'],
+    cardBg: '#ffffff',
   },
 ]
 
 export const all = [
+  {
+    to: '/projects/casestudy-wayfair',
+    category: 'dev',
+    image: '/images/case-studies/ExternWayfair-Hero.jpg',
+    alt: 'Wayfair Rugs Market Intelligence Dashboard',
+    tag: 'AI & Automation',
+    title: 'Wayfair Rugs Market Intelligence',
+    desc: 'AI Agent Developer externship building 5 connected AI agents in n8n — trend discovery, competitor monitoring, and content generation — feeding a single Market Intelligence Dashboard for Wayfair\'s Rugs category team.',
+    role: 'AI Agent Developer',
+    type: 'Industry Externship (Extern × Wayfair)',
+    tools: ['AI Agents', 'n8n', 'Workflow Automation', 'Market Intelligence', 'Competitive Analysis'],
+    cardBg: 'var(--jet-black)',
+    imageFill: true,
+  },
+  {
+    to: '/projects/casestudy-knowledgedatabase',
+    category: 'dev',
+    image: '/images/case-studies/KnowledgeDatabase-Hero.png',
+    alt: 'Streamlined Knowledge Pipeline — conceptual diagram',
+    tag: 'AI & Automation',
+    title: 'AI Knowledge Database',
+    desc: 'A self-initiated AI knowledge system built at a digital marketing agency — an Obsidian memory and knowledge base paired with Claude Code that ingests fast-moving industry information, weighs each source for trustworthiness, and now powers daily work across the department.',
+    role: 'Self-Initiated Builder',
+    type: 'Internal Tool — Unassigned, Built on Own Initiative',
+    tools: ['AI Knowledge Systems', 'Obsidian', 'Claude Code', 'Trust Scoring', 'Self-Initiated'],
+    cardBg: 'var(--jet-black)',
+  },
   {
     to: '/projects/casestudy-firewatchbc',
     category: 'pm',
@@ -43,6 +84,7 @@ export const all = [
     role: 'Project Manager - UX Research & Delivery',
     type: 'Academic Project',
     tools: ['Product Thinking', 'Lean UX', 'UX Research', 'Usability Testing', 'Scope & Prioritization'],
+    cardBg: '#C4C4C4',
   },
   {
     to: '/projects/casestudy-lanotte',
@@ -55,18 +97,7 @@ export const all = [
     role: 'Product Manager - Planning & Delivery',
     type: 'Academic Project',
     tools: ['Product Definition', 'Waterfall Delivery', 'Scope & Planning', 'Gantt & WBS'],
-  },
-  {
-    to: '/projects/casestudy-forme',
-    category: 'dev',
-    image: '/images/case-studies/Forme-Hero.png',
-    alt: 'Forme App Screens',
-    tag: 'Builds & Experiments',
-    title: 'Forme Styling App',
-    desc: 'AI-assisted MVP development for a personalized styling app — defining product structure, building onboarding and quiz flows, and creating a rule-based recommendations engine to translate user inputs into styling guidance, with a focus on moving quickly from idea to a testable build.',
-    role: 'Product Owner & Builder',
-    type: 'Solo Project (In Progress)',
-    tools: ['Product Definition', 'AI Workflow', 'MVP Development', 'React', 'Supabase', 'Rule-Based Systems'],
+    cardBg: '#ffffff',
   },
   {
     to: '/projects/casestudy-realstreet',
@@ -79,6 +110,21 @@ export const all = [
     role: 'Media Operations & Live Event Delivery',
     type: 'Client Project',
     tools: ['Stakeholder Management', 'Operational Strategy', 'Media Relations', 'Live Execution', 'Cross-Team Coordination'],
+    cardBg: 'var(--jet-black)',
+    imageFill: true,
+  },
+  {
+    to: '/projects/casestudy-forme',
+    category: 'dev',
+    image: '/images/case-studies/Forme-Hero.png',
+    alt: 'Forme App Screens',
+    tag: 'AI & Automation',
+    title: 'Forme Styling App',
+    desc: 'AI-assisted MVP development for a personalized styling app — defining product structure, building onboarding and quiz flows, and creating a rule-based recommendations engine to translate user inputs into styling guidance, with a focus on moving quickly from idea to a testable build.',
+    role: 'Product Owner & Builder',
+    type: 'Solo Project (In Progress)',
+    tools: ['Product Definition', 'AI Workflow', 'MVP Development', 'React', 'Supabase', 'Rule-Based Systems'],
+    cardBg: '#dcd1c8',
   },
   {
     to: '/projects/casestudy-velvetroom',
@@ -91,12 +137,14 @@ export const all = [
     role: 'Product Owner & Scrum Master',
     type: 'Academic Project',
     tools: ['Agile / Scrum', 'Backlog Prioritization', 'Sprint Facilitation', 'Cross-Functional Delivery'],
+    cardBg: '#e7ccbd',
+    imageFill: true,
   },
 ]
 
 export const filterDescriptions = {
   all: "Here's how I think and what I ship.",
+  dev: 'Hands-on builds where AI is the discipline, not just the tool — agents, automation workflows, and working products I design and ship end to end.',
   pm: 'Projects focused on defining what should be built and why — grounded in user needs, research, and decision-making that shapes the product itself.',
   ex: 'Projects focused on turning ideas into reality — leading timelines, aligning teams, and ensuring complex work gets delivered in real-world conditions.',
-  dev: 'Hands-on projects where I test ideas, explore new tools, and build working products — often using AI to improve speed and workflow.',
 }

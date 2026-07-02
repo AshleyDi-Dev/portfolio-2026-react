@@ -67,7 +67,7 @@ export default function Contact() {
             <div className="page-label">Get In Touch</div>
             <h1>Let's<br /><span>talk.</span></h1>
             <p className="availability">
-              I'm based in <strong>Vancouver, BC</strong> — open to remote roles across Canada and hybrid opportunities in the Greater Vancouver Area. I'm actively looking for product roles, APM programs, and select freelance collaborations.
+              I'm based in <strong>Vancouver, BC</strong> — open to remote roles across Canada and hybrid opportunities in the Greater Vancouver Area. I'm actively looking for product roles at the intersection of AI and automation, APM programs, and select freelance collaborations.
             </p>
           </div>
 

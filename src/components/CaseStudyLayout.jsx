@@ -14,8 +14,11 @@ const NAV_OFFSET = 72
  */
 export default function CaseStudyLayout({ heroId = 'cs-pg1', sections = [], children }) {
   const rootRef = useRef(null)
+  const fabRef = useRef(null)
+  const mobileMenuRef = useRef(null)
   const [tocVisible, setTocVisible] = useState(false)
   const [activeId, setActiveId] = useState(sections[0]?.id)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   // Fade-in on scroll
   useEffect(() => {
@@ -65,11 +68,33 @@ export default function CaseStudyLayout({ heroId = 'cs-pg1', sections = [], chil
     if (!target) return
     const top = target.getBoundingClientRect().top + window.scrollY - NAV_OFFSET
     window.scrollTo({ top, behavior: 'smooth' })
+    setMobileMenuOpen(false)
   }
+
+  // Mobile TOC menu: close on outside click, close on Escape (return focus to the FAB, no trap)
+  useEffect(() => {
+    if (!mobileMenuOpen) return
+    const handlePointerDown = (e) => {
+      if (mobileMenuRef.current?.contains(e.target) || fabRef.current?.contains(e.target)) return
+      setMobileMenuOpen(false)
+    }
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        setMobileMenuOpen(false)
+        fabRef.current?.focus()
+      }
+    }
+    document.addEventListener('pointerdown', handlePointerDown)
+    document.addEventListener('keydown', handleKeyDown)
+    return () => {
+      document.removeEventListener('pointerdown', handlePointerDown)
+      document.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [mobileMenuOpen])
 
   return (
     <div className="cs-root" ref={rootRef}>
-      <nav>
+      <nav aria-label="Case study navigation">
         <span className="nav-name"><Link to="/">Ashley DiBuduo</Link></span>
         <Link to="/projects" className="nav-back">← Back to Projects</Link>
       </nav>
@@ -90,6 +115,47 @@ export default function CaseStudyLayout({ heroId = 'cs-pg1', sections = [], chil
           ))}
         </ul>
       </nav>
+
+      {tocVisible && (
+        <button
+          ref={fabRef}
+          type="button"
+          className={`cs-toc-fab${mobileMenuOpen ? ' is-open' : ''}`}
+          aria-label={mobileMenuOpen ? 'Close section menu' : 'Open section menu'}
+          aria-expanded={mobileMenuOpen}
+          aria-controls="cs-toc-mobile-menu"
+          onClick={() => setMobileMenuOpen((v) => !v)}
+        >
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+            <line x1="4" y1="7" x2="20" y2="7" />
+            <line x1="4" y1="12" x2="20" y2="12" />
+            <line x1="4" y1="17" x2="14" y2="17" />
+          </svg>
+        </button>
+      )}
+
+      {mobileMenuOpen && (
+        <nav
+          id="cs-toc-mobile-menu"
+          ref={mobileMenuRef}
+          className="cs-toc-mobile-menu"
+          aria-label="Table of contents"
+        >
+          <ul>
+            {sections.map((s) => (
+              <li key={s.id}>
+                <a
+                  href={`#${s.id}`}
+                  className={activeId === s.id ? 'is-active' : ''}
+                  onClick={(e) => handleTocClick(e, s.id)}
+                >
+                  {s.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )}
 
       {children}
     </div>

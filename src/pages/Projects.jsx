@@ -8,9 +8,9 @@ import { RESUME } from '../data/site.js'
 
 const FILTERS = [
   { key: 'all', label: 'All' },
+  { key: 'dev', label: 'AI & Automation' },
   { key: 'pm', label: 'Product Thinking' },
   { key: 'ex', label: 'Delivery & Execution' },
-  { key: 'dev', label: 'Builds & Experiments' },
 ]
 
 export default function Projects() {
@@ -23,7 +23,7 @@ export default function Projects() {
       <Seo
         title="Projects | Ashley DiBuduo"
         description="Explore product, UX, and project management case studies showcasing user-centered design, cross-functional collaboration, and end-to-end digital delivery."
-        url="https://ashleydibuduo.ca/projects.html"
+        url="https://ashleydibuduo.ca/projects"
         ogDescription="A collection of product, UX, and project delivery case studies showcasing problem-solving, strategy, and execution."
         image="https://ashleydibuduo.ca/images/og/casestudy-firewatchpreview.png"
         imageAlt="Ashley DiBuduo Case Studies"
@@ -37,7 +37,7 @@ export default function Projects() {
           <h1>Some I managed.<br />Some I <span>built.</span><br />A few I did both.</h1>
         </div>
         <div className="page-header-right">
-          <span className="project-count">05</span>
+          <span className="project-count">07</span>
           <span className="project-count-label">Projects & counting</span>
         </div>
       </section>

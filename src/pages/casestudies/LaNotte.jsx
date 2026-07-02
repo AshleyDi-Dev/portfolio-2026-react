@@ -20,7 +20,7 @@ export default function LaNotte() {
         title="La Notte — Case Study"
         description="Waterfall product management case study for a mobile app, including requirements, planning, and structured delivery across phases."
         ogType="article"
-        url="https://ashleydibuduo.ca/casestudy-lanotte.html"
+        url="https://ashleydibuduo.ca/projects/casestudy-lanotte"
         ogTitle="La Notte Brand & App Concept Case Study | Ashley DiBuduo"
         ogDescription="A Waterfall mobile app project focused on structured planning, requirements, and delivery."
         image="https://ashleydibuduo.ca/images/og/casestudy-lanottepreview.png"
@@ -33,7 +33,7 @@ export default function LaNotte() {
         {/* PAGE 1 — HERO + DETAILS BAR */}
         <div id="cs-pg1" className="page lanotte-page-hero">
           <section className="cs-hero">
-            <img src="/images/case-studies/LaNotte-Hero.jpg" alt="La Notte App & Website Screens" />
+            <img src="/images/case-studies/LaNotte-Hero.jpg" width="2000" height="1391" alt="La Notte App & Website Screens" />
             <div className="cs-hero-gradient"></div>
             <div className="cs-hero-content">
               <h1>La Notte <span>Brand &amp; App Concept</span></h1>
@@ -86,7 +86,7 @@ export default function LaNotte() {
               <p>The decisions that mattered most weren't about the deliverables themselves — they were about sequencing, tradeoffs, and knowing what to protect when things shifted. That kind of thinking is what I bring to product work.</p>
             </div>
             <div className="cs-split-image lanotte-image-panel">
-              <img src="/images/case-studies/LaNotte-WBS.png" alt="Work Breadown Structure WBS" />
+              <img loading="lazy" src="/images/case-studies/LaNotte-WBS.png" width="1322" height="1284" alt="Work Breadown Structure WBS" />
             </div>
           </div>
         </div>
@@ -95,7 +95,7 @@ export default function LaNotte() {
         <div id="cs-pg3" className="page fade-in lanotte-planning-page">
           <div className="cs-split">
             <div className="cs-split-image lanotte-image-panel">
-              <img src="/images/case-studies/Lanotte-GanttChart.png" alt="Gantt Chart via ClickUp" />
+              <img loading="lazy" src="/images/case-studies/Lanotte-GanttChart.png" width="2658" height="1382" alt="Gantt Chart via ClickUp" />
             </div>
             <div className="cs-split-text">
               <div className="section-label">The Challenge</div>
@@ -115,7 +115,7 @@ export default function LaNotte() {
               <div className="risk-card">
                 <div>
                   <div className="risk-section-title">Risk</div>
-                  <h4>Schedule Delays Compounding Across Phases</h4>
+                  <h3>Schedule Delays Compounding Across Phases</h3>
                   <p>Multiple interconnected deliverables — brand assets, app mockups, marketing materials, final documentation — each dependent on the previous stage completing on time in a strict Waterfall sequence.</p>
                 </div>
                 <div>
@@ -131,7 +131,7 @@ export default function LaNotte() {
               <div className="risk-card">
                 <div>
                   <div className="risk-section-title">Risk</div>
-                  <h4>Mid-Project Change Request</h4>
+                  <h3>Mid-Project Change Request</h3>
                   <p>Partway through the project timeline, a change request required adjustments to previously planned deliverables — introducing new requirements into a methodology that assumes sequential, fixed-scope execution.</p>
                 </div>
                 <div>
@@ -147,7 +147,7 @@ export default function LaNotte() {
               <div className="risk-card">
                 <div>
                   <div className="risk-section-title">Risk</div>
-                  <h4>Balancing Coordination with Creative Contribution</h4>
+                  <h3>Balancing Coordination with Creative Contribution</h3>
                   <p>As Project Manager, I held both planning oversight and direct creative responsibilities — including designing the promotional website mockup and developing app interface content — with both tracks running simultaneously.</p>
                 </div>
                 <div>
@@ -229,15 +229,15 @@ export default function LaNotte() {
               <p>Before moving into high-fidelity mockups, we created two user flows to map the required functionality and core user experience — ensuring every screen had a clear purpose and every path had a logical end state.</p>
               <div className="user-flow-images">
                 <div className="user-flow-column">
-                  <img src="/images/case-studies/LaNotte-ReservationUserFlow.png" alt="Reservation User Flow" />
+                  <img loading="lazy" src="/images/case-studies/LaNotte-ReservationUserFlow.png" width="1256" height="1256" alt="Reservation User Flow" />
                 </div>
                 <div className="user-flow-column">
-                  <img src="/images/case-studies/LaNotte-PickupUserFlow.png" alt="Pickup Order User Flow" />
+                  <img loading="lazy" src="/images/case-studies/LaNotte-PickupUserFlow.png" width="1262" height="1262" alt="Pickup Order User Flow" />
                 </div>
               </div>
             </div>
             <div className="cs-split-image prototype-image-panel">
-              <img src="/images/case-studies/LaNotte-Prototypeimage.png" alt="LaNotte interactive prototype preview" />
+              <img loading="lazy" src="/images/case-studies/LaNotte-Prototypeimage.png" width="930" height="1800" alt="LaNotte interactive prototype preview" />
               <a href="https://www.figma.com/proto/GauTPHADKMmlDToWR7UnND/Tuscan-Restaurant?node-id=146-137&t=z1ne6tS46Yx7bdLK-0&scaling=scale-down&content-scaling=fixed&page-id=146%3A136&starting-point-node-id=146%3A137&hide-ui=1" target="_blank" rel="noopener noreferrer" className="prototype-link">
                 View Interactive Prototype ↗
               </a>
@@ -254,8 +254,8 @@ export default function LaNotte() {
           </div>
 
           <ProjectNav
-            prev={{ to: '/projects/casestudy-firewatchbc', title: 'FirewatchBC Wildfire App' }}
-            next={{ to: '/projects/casestudy-forme', title: 'Forme Styling App' }}
+            prev={{ to: '/projects/casestudy-firewatchbc', title: 'FireWatch BC Wildfire App' }}
+            next={{ to: '/projects/casestudy-realstreet', title: 'REAL Street Festival' }}
           />
           <Footer />
         </div>

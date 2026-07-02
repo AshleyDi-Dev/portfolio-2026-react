@@ -22,7 +22,7 @@ export default function Forme() {
         title="Forme — Case Study"
         description="Forme — an AI-assisted MVP build for a personalized style and self-knowledge app. Product thinking, AI workflow, and full-stack development."
         ogType="article"
-        url="https://ashleydibuduo.ca/casestudy-forme.html"
+        url="https://ashleydibuduo.ca/projects/casestudy-forme"
         ogTitle="Forme Case Study | Ashley DiBuduo"
         ogDescription="An AI-assisted MVP for a personalized style app — product thinking, workflow design, and full-stack execution."
         image="https://ashleydibuduo.ca/images/og/casestudy-formepreview.png"
@@ -35,7 +35,7 @@ export default function Forme() {
         {/* PAGE 1 — HERO + DETAILS BAR */}
         <div id="cs-pg1" className="page forme-page-hero">
           <section className="cs-hero">
-            <img src="/images/case-studies/Forme-Hero.png" alt="Forme Screens" />
+            <img src="/images/case-studies/Forme-Hero.png" width="3000" height="2201" alt="Forme Screens" />
             <div className="cs-hero-gradient"></div>
             <div className="cs-hero-content">
               <h1>Forme <span>Style App</span></h1>
@@ -101,7 +101,7 @@ export default function Forme() {
               <p className="forme-callout">The goal wasn’t a finished product — it was something functional enough to test the concept and gather real feedback, while also developing a workflow I could take into future builds.</p>
             </div>
             <div className="cs-split-image forme-image-panel">
-              <img src="/images/case-studies/Forme-figjam.webp" alt="Figjam App Flow Diagram" />
+              <img loading="lazy" src="/images/case-studies/Forme-figjam.webp" width="1232" height="978" alt="Figjam App Flow Diagram" />
             </div>
           </div>
         </div>
@@ -128,7 +128,7 @@ export default function Forme() {
         <div id="cs-pg5" className="page fade-in forme-approach-page">
           <div className="cs-split">
             <div className="cs-split-image forme-image-panel">
-              <img src="/images/case-studies/Forme-trello.webp" alt="Trello Workflow" />
+              <img loading="lazy" src="/images/case-studies/Forme-trello.webp" width="1400" height="845" alt="Trello Workflow" />
             </div>
             <div className="cs-split-text">
               <div className="section-label">My Approach</div>
@@ -155,7 +155,7 @@ export default function Forme() {
               <div className="risk-card">
                 <div>
                   <div className="risk-section-title">Decision</div>
-                  <h4>Rule-Based Recommendations Engine, Not AI at Runtime</h4>
+                  <h3>Rule-Based Recommendations Engine, Not AI at Runtime</h3>
                   <p>The recommendations engine is a pure JavaScript lookup function — a structured rules file that maps style profile results to output. No AI inference at runtime.</p>
                 </div>
                 <div>
@@ -171,7 +171,7 @@ export default function Forme() {
               <div className="risk-card">
                 <div>
                   <div className="risk-section-title">Decision</div>
-                  <h4>Four Modules, Not One Quiz</h4>
+                  <h3>Four Modules, Not One Quiz</h3>
                   <p>Separating body proportions, face shape, hair profile, and seasonal colour into distinct guided flows keeps each analysis focused — and lets users retake individual modules as things change. Each generates its own output: clothing and silhouette guidance, neckline and accessory recommendations, hair care and styling, a full colour palette with metals and neutrals.</p>
                 </div>
                 <div>
@@ -187,7 +187,7 @@ export default function Forme() {
               <div className="risk-card">
                 <div>
                   <div className="risk-section-title">Decision</div>
-                  <h4>Monetization Through Depth, Not Access</h4>
+                  <h3>Monetization Through Depth, Not Access</h3>
                   <p>The core experience is free. Paid will unlock deeper analysis — 12-season color vs. 4-season — not a gated product entirely.</p>
                 </div>
                 <div>
@@ -227,7 +227,7 @@ export default function Forme() {
               </div>
             </div>
             <div className="cs-split-image prototype-image-panel">
-              <img src="/images/case-studies/Forme-Environment.jpg" alt="Forme profile page" />
+              <img loading="lazy" src="/images/case-studies/Forme-Environment.jpg" width="3000" height="2100" alt="Forme profile page" />
               <a href="https://formestyling.vercel.app/" target="_blank" rel="noopener noreferrer" className="prototype-link">
                 Live App ↗
               </a>
@@ -299,8 +299,8 @@ export default function Forme() {
           </div>
 
           <ProjectNav
-            prev={{ to: '/projects/casestudy-lanotte', title: 'La Notte Brand & App Concept' }}
-            next={{ to: '/projects/casestudy-realstreet', title: 'Real Street Festival' }}
+            prev={{ to: '/projects/casestudy-realstreet', title: 'REAL Street Festival' }}
+            next={{ to: '/projects/casestudy-velvetroom', title: 'Velvet Room Website' }}
           />
           <Footer />
         </div>

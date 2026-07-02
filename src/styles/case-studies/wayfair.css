@@ -1,0 +1,195 @@
+/* ═══════════════════════════════════════
+   WAYFAIR — per-study overrides
+═══════════════════════════════════════ */
+
+/* PAGE 1 — HERO (jet-black) */
+.wayfair-page-hero { background: var(--jet-black); justify-content: space-between; }
+.wayfair-hero-tags { margin-top: 1.25rem; margin-bottom: 0; }
+
+/* PAGE 2 — OVERVIEW (off-white) */
+.wayfair-overview-page { background: var(--off-white); }
+.wayfair-overview-page .section-label { color: var(--sapphire); }
+.wayfair-overview-page h2 { color: var(--jet-black); }
+.wayfair-overview-page h2 span { color: var(--sapphire); }
+.wayfair-overview-page .body-text { color: var(--jet-black); }
+.wayfair-overview-page .wayfair-list { color: var(--jet-black); }
+.wayfair-overview-page .wayfair-list strong { color: var(--jet-black); font-weight: 700; }
+
+/* PAGE 3 — THE CHALLENGE (palm-leaf) */
+.wayfair-challenge-page { background: var(--palm-leaf); }
+.wayfair-challenge-page .section-label { color: var(--chartreuse); }
+.wayfair-challenge-page h2 { color: var(--off-white); }
+.wayfair-challenge-page h2 span { color: var(--chartreuse); }
+.wayfair-challenge-page .body-text { color: var(--off-white); }
+
+/* PAGE 4 — MY APPROACH (jet-black) */
+.wayfair-approach-page { background: var(--jet-black); }
+.wayfair-approach-page .section-label { color: var(--chartreuse); }
+.wayfair-approach-page h2 { color: var(--off-white); }
+.wayfair-approach-page h2 span { color: var(--chartreuse); }
+.wayfair-approach-page .cs-split-text p { color: var(--grey-olive); }
+
+/* PAGE 5 — KEY DECISIONS (off-white) */
+.wayfair-decisions-page { background: var(--off-white); }
+.wayfair-decisions-band { background: transparent; }
+.wayfair-decisions-page .section-label { color: var(--sapphire); }
+.wayfair-decisions-page h2 { color: var(--jet-black); }
+.wayfair-decisions-page h2 span { color: var(--sapphire); }
+.wayfair-decisions-page .risk-section-title { color: var(--sapphire); }
+.wayfair-decisions-page .risk-card { border-color: rgba(92,102,127,0.3); }
+.wayfair-decisions-page .risk-card h3 { color: var(--jet-black); }
+.wayfair-decisions-page .risk-card p { color: var(--palm-leaf); }
+
+/* PAGE 6 — THE OUTPUT (grey-olive)
+   NOTE: grey-olive (#d3d4ce) and off-white (#efede4) are both light colors —
+   off-white text here previously gave a 1.27:1 contrast ratio (WCAG requires
+   4.5:1 for body text). Using jet-black/navy-blue instead, both well over 9:1. */
+.wayfair-output-page { background: var(--grey-olive); }
+.wayfair-output-page .cs-split-text { background: var(--grey-olive); }
+.wayfair-output-page .section-label { color: var(--navy-blue); }
+.wayfair-output-page h2 { color: var(--jet-black); }
+.wayfair-output-page h2 span { color: var(--navy-blue); }
+.wayfair-output-page .cs-split-text p { color: var(--jet-black); }
+.wayfair-stats-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(0,0,0,0.12);
+}
+.wayfair-stat-item { display: flex; flex-direction: column; }
+.wayfair-stat-number { font-family: var(--ff-Montserrat); font-weight: 900; font-size: 3rem; color: var(--sapphire); line-height: 1; }
+.wayfair-stat-label { font-size: 0.9rem; color: var(--jet-black); margin-top: 0.25rem; }
+.wayfair-output-page .prototype-link { color: var(--off-white); background-color: var(--sapphire); border-color: var(--sapphire); }
+.wayfair-output-page .prototype-link:hover { color: var(--jet-black); background-color: var(--chartreuse); border-color: var(--chartreuse); }
+
+/* PAGE 7 — RESULTS (palm-leaf) */
+.wayfair-results-page { background: var(--palm-leaf); }
+.wayfair-results-page .section-label { color: var(--chartreuse); }
+.wayfair-results-page h2 { color: var(--off-white); }
+.wayfair-results-page h2 span { color: var(--chartreuse); }
+.wayfair-results-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 2rem; }
+.wayfair-results-col { padding: 2.5rem; display: flex; flex-direction: column; gap: 1.25rem; }
+.wayfair-results-col--worked { background: rgba(255,255,255,0.06); border-top: 2px solid var(--chartreuse); }
+.wayfair-results-col--didnt { background: rgba(0,0,0,0.12); border-top: 2px solid rgba(255,255,255,0.2); }
+.wayfair-results-label {
+  font-family: "Arsenal SC", sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--chartreuse);
+}
+.wayfair-results-col--didnt .wayfair-results-label { color: var(--grey-olive); }
+
+/* PAGE 8 — NEXT STEPS (jet-black) */
+.wayfair-next-page { background: var(--jet-black); }
+.wayfair-next-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 4rem 5vw;
+  box-sizing: border-box;
+  text-align: center;
+}
+.wayfair-next-label { margin-bottom: 0.75rem; }
+.wayfair-next-heading { font-family: var(--ff-Montserrat); font-weight: 900; color: var(--off-white); margin: 0 0 1rem; max-width: 700px; }
+.wayfair-next-heading span { color: var(--chartreuse); }
+.wayfair-next-intro {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1rem;
+  color: var(--grey-olive);
+  line-height: 1.75;
+  max-width: 620px;
+  margin: 0 0 1rem;
+}
+.wayfair-next-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1000px;
+  text-align: left;
+  margin-top: 2.5rem;
+}
+.wayfair-next-card { padding: 1.5rem; background: transparent; display: flex; flex-direction: column; gap: 0.75rem; }
+.wayfair-next-card--sapphire { border-top: 2px solid var(--sapphire); }
+.wayfair-next-card--chartreuse { border-top: 2px solid var(--chartreuse); }
+.wayfair-next-card--muted { border-top: 2px solid rgba(255,255,255,0.2); }
+.wayfair-next-title {
+  font-family: "Arsenal SC", sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin: 0;
+}
+.wayfair-next-title--sapphire { color: var(--periwinkle); }
+.wayfair-next-title--chartreuse { color: var(--chartreuse); }
+.wayfair-next-title--muted { color: var(--off-white); }
+.wayfair-next-copy { font-family: "DM Sans", sans-serif; font-size: 0.9rem; color: var(--grey-olive); line-height: 1.75; margin: 0; }
+.wayfair-next-note {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--grey-olive);
+  line-height: 1.75;
+  max-width: 620px;
+  margin: 2rem 0 0;
+}
+
+/* PAGE 9 — REFLECTION (palm-leaf) */
+.wayfair-reflection-page { justify-content: space-between; }
+.wayfair-reflection-section { flex: 1; background: var(--palm-leaf); }
+.wayfair-reflection-section p { color: var(--off-white); }
+.wayfair-reflection-section p + p { margin-top: 1.25rem; }
+
+/* SHARED — IMAGE PANEL */
+.wayfair-image-panel { display: flex; align-items: center; justify-content: center; background: transparent; padding: 2rem; }
+.wayfair-image-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  height: 100%;
+}
+.wayfair-image-stack img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+  background: #fff;
+}
+
+/* SHARED — LISTS */
+.wayfair-list {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.9rem;
+  color: var(--grey-olive);
+  line-height: 1.75;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.wayfair-list strong { color: var(--off-white); font-weight: 500; }
+.wayfair-list a { color: var(--sapphire); text-decoration: underline; text-underline-offset: 2px; }
+.wayfair-list a:hover { color: var(--chartreuse); }
+.wayfair-results-col .wayfair-list { color: var(--off-white); }
+.wayfair-results-col .wayfair-list a { color: var(--sapphire); }
+
+/* RESPONSIVE */
+@media (max-width: 1023px) {
+  .wayfair-results-grid { grid-template-columns: 1fr; }
+  .wayfair-next-grid { grid-template-columns: 1fr; }
+  .wayfair-next-wrap { padding: 4rem 2rem; }
+}
+
+@media (max-width: 767px) {
+  .wayfair-results-col { padding: 1.75rem; }
+  .wayfair-next-wrap { padding: 3rem 1.25rem; text-align: left; align-items: flex-start; }
+  .wayfair-next-grid { grid-template-columns: 1fr; margin-top: 1.5rem; }
+  .wayfair-reflection-section p + p { margin-top: 1rem; }
+}

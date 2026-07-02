@@ -32,7 +32,7 @@
 .lanotte-risks-page h2 { color: var(--off-white); }
 .lanotte-risks-page h2 span { color: var(--chartreuse); }
 .lanotte-risks-page .risk-section-title { color: var(--chartreuse); }
-.lanotte-risks-page .risk-card h4 { color: var(--off-white); }
+.lanotte-risks-page .risk-card h3 { color: var(--off-white); }
 .lanotte-risks-page .risk-card p { color: var(--off-white); }
 
 /* PAGE 5 — PHASE BREAKDOWN (off-white) */

@@ -76,15 +76,21 @@
 .forme-decisions-page h2 span { color: var(--sapphire); }
 .forme-decisions-page .risk-section-title { color: var(--sapphire); }
 .forme-decisions-page .risk-card { border-color: rgba(92,102,127,0.3); }
-.forme-decisions-page .risk-card h4 { color: var(--jet-black); }
+.forme-decisions-page .risk-card h3 { color: var(--jet-black); }
 .forme-decisions-page .risk-card p { color: var(--palm-leaf); }
 
-/* PAGE 7 — THE EXPERIMENT (grey-olive) */
+/* PAGE 7 — THE EXPERIMENT (grey-olive)
+   NOTE: grey-olive (#d3d4ce) and off-white (#efede4) are both light colors —
+   the paragraph/label text here previously used grey-olive on a grey-olive
+   background (1:1 contrast — fully invisible) and off-white/chartreuse gave
+   only 1.27:1 (WCAG requires 4.5:1 for body text). Using jet-black/navy-blue
+   instead, both well over 9:1. */
 .forme-experiment-page { background: var(--grey-olive); }
-.forme-experiment-page .section-label { color: var(--chartreuse); }
-.forme-experiment-page h2 { color: var(--off-white); }
-.forme-experiment-page h2 span { color: var(--sapphire); }
-.forme-experiment-page .cs-split-text p { color: var(--grey-olive); }
+.forme-experiment-page .cs-split-text { background: var(--grey-olive); }
+.forme-experiment-page .section-label { color: var(--navy-blue); }
+.forme-experiment-page h2 { color: var(--jet-black); }
+.forme-experiment-page h2 span { color: var(--navy-blue); }
+.forme-experiment-page .cs-split-text p { color: var(--jet-black); }
 .forme-stats-stack {
   display: flex;
   flex-direction: column;
@@ -95,7 +101,7 @@
 }
 .forme-stat-item { display: flex; flex-direction: column; }
 .forme-stat-number { font-family: var(--ff-Montserrat); font-weight: 900; font-size: 3rem; color: var(--sapphire); line-height: 1; }
-.forme-stat-label { font-size: 0.9rem; color: var(--grey-olive); margin-top: 0.25rem; }
+.forme-stat-label { font-size: 0.9rem; color: var(--jet-black); margin-top: 0.25rem; }
 .forme-experiment-page .prototype-link { color: var(--off-white); background-color: var(--sapphire); border-color: var(--sapphire); }
 .forme-experiment-page .prototype-link:hover { color: var(--jet-black); background-color: var(--chartreuse); border-color: var(--chartreuse); }
 
@@ -160,7 +166,7 @@
   text-transform: uppercase;
   margin: 0;
 }
-.forme-next-title--sapphire { color: var(--sapphire); }
+.forme-next-title--sapphire { color: var(--periwinkle); }
 .forme-next-title--chartreuse { color: var(--chartreuse); }
 .forme-next-title--muted { color: var(--off-white); }
 .forme-next-copy { font-family: "DM Sans", sans-serif; font-size: 0.9rem; color: var(--grey-olive); line-height: 1.75; margin: 0; }

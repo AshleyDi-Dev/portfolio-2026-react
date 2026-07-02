@@ -37,7 +37,7 @@
 .firewatch-risks-band .section-label,
 .firewatch-risks-band .risk-section-title { color: var(--sapphire); }
 .firewatch-risks-page h2,
-.firewatch-risks-page .risk-card h4 { color: var(--jet-black); }
+.firewatch-risks-page .risk-card h3 { color: var(--jet-black); }
 .firewatch-risks-page .risk-card p { color: var(--palm-leaf); }
 
 /* PAGE 5 — FINDINGS (periwinkle) */
@@ -294,7 +294,7 @@
   .firewatch-hypothesis-page h2,
   .firewatch-risks-page h2 { font-size: 3rem; }
   .firewatch-risks-page .risk-card p,
-  .firewatch-risks-page .risk-card h4 { font-size: 1rem; }
+  .firewatch-risks-page .risk-card h3 { font-size: 1rem; }
   .firewatch-list li { font-size: 1rem; }
   .firewatch-phase-page .cs-phase-item p { font-size: 1rem; }
   .firewatch-next-step-copy { font-size: 1rem; }
@@ -306,7 +306,7 @@
   .firewatch-hypothesis-page h2,
   .firewatch-risks-page h2 { font-size: 3.5rem; }
   .firewatch-risks-page .risk-card p,
-  .firewatch-risks-page .risk-card h4 { font-size: 1.1rem; }
+  .firewatch-risks-page .risk-card h3 { font-size: 1.1rem; }
   .firewatch-list li { font-size: 1.05rem; }
   .firewatch-phase-page .cs-phase-item p { font-size: 1.05rem; }
   .firewatch-next-step-copy { font-size: 1.05rem; }

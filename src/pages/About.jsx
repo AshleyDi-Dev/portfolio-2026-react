@@ -31,8 +31,8 @@ const TIMELINE = [
   },
   {
     years: '2026 – Now', tag: 'Current',
-    title: 'AI Product & Automation', subtitle: 'Industry Internships — Wayfair · Roswell NYC',
-    body: 'As part of my program’s internship requirement, I took on two AI-focused placements: AI Agent Developer at Wayfair (via Extern), building automation workflows and a market-intelligence dashboard in n8n, and SEO/AEO Intern at Roswell NYC, building an LLM-powered knowledge base with Claude Code. Anthropic Claude AI Fluency certified.',
+    title: 'AI Product & Automation', subtitle: 'Industry Internships — Wayfair · Digital Marketing',
+    body: 'As part of my program’s internship requirement, I took on two AI-focused placements: AI Agent Developer at Wayfair (via Extern), building automation workflows and a market-intelligence dashboard in n8n, and a self-initiated AI knowledge base built at a digital marketing agency, using Claude Code — since adopted department-wide. Anthropic Claude AI Fluency certified.',
   },
 ]
 
@@ -42,7 +42,7 @@ export default function About() {
       <Seo
         title="About | Ashley DiBuduo"
         description="Learn more about Ashley, a Vancouver-based product manager and builder with 15+ years in music and events, now building digital products, AI workflows, and automation."
-        url="https://ashleydibuduo.ca/about.html"
+        url="https://ashleydibuduo.ca/about"
         ogDescription="Product manager and builder with 15+ years leading cross-functional campaigns and live-event execution, now focused on product, UX, AI workflows, and automation."
         imageAlt="About Ashley DiBuduo"
         twitterDescription="Product manager and builder with 15+ years in music and events, now working in product, UX, and AI."
@@ -60,7 +60,7 @@ export default function About() {
             <div className="photo-accent"></div>
             <div className="photo-placeholder">
               <div className="photo-duotone"></div>
-              <img src="/images/test-photo.png" alt="Ashley DiBuduo" />
+              <img src="/images/test-photo.png" width="1344" height="2352" alt="Ashley DiBuduo" />
             </div>
           </div>
         </div>
@@ -77,7 +77,7 @@ export default function About() {
 
       {/* BACKGROUND TIMELINE */}
       <section className="background-section">
-        <div className="section-label">My Experience</div>
+        <h2 className="section-label">My Experience</h2>
         <div className="timeline">
           {TIMELINE.map((item) => (
             <div className="timeline-item" key={item.title}>

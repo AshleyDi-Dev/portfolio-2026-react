@@ -8,39 +8,39 @@ const ICON = (name) => `/images/tool-icons/${name}`
 const CLUSTERS = [
   {
     number: '01',
-    title: 'Product Thinking & Research',
-    desc: "My process starts with the user: understanding their needs, analyzing the system, and defining what to build. I've led user research, journey mapping, usability testing, and synthesized findings into actionable steps. Research shapes my thinking, not just my process. I'm well-versed in Agile, Scrum, Kanban, and Waterfall, and applying them in high-stakes contexts.",
-    tags: ['User Research', 'Journey Mapping', 'User Testing', 'Information Architecture', 'Synthesis & Insights', 'Agile', 'Scrum', 'Kanban', 'Waterfall', 'Sprint Planning', 'Stakeholder Alignment'],
+    title: 'AI & Automation',
+    desc: "AI is a core part of how I work and what I build — not an afterthought. I structure my systems around a WAT framework — Workflows, Agents, Tools — designing agentic and multi-agent workflows, automating research and operations in n8n, and building with Claude Code: market-intelligence dashboards, a moodboard agent, and an LLM-powered knowledge base. I treat AI as a collaborator, with the prompt engineering and judgment to keep the output useful.",
+    tags: ['Claude', 'Claude Code', 'WAT Framework', 'Agentic Workflows', 'Multi-Agent Systems', 'n8n', 'Workflow Automation', 'Prompt Engineering', 'LLM Integration', 'AI-Assisted Research', 'Gemini', 'Generative AI'],
   },
   {
     number: '02',
-    title: 'UX & Design',
-    desc: "Good UX isn't something you bolt on at the end — it's the reason people stay or leave. I've studied it, practiced it, and built it into how I evaluate every product decision. I know what makes an experience feel right, and more importantly, I know how to articulate why it doesn't when something is off.",
-    tags: ['Figma', 'Wireframing', 'Prototyping', 'Usability Testing', 'Accessibility', 'Information Architecture'],
-  },
-  {
-    number: '03',
     title: 'Strategy & Competitive Frameworks',
     desc: 'I use my background in market study, positioning, and competition to shape my approach. I assess landscapes, identify opportunities, and define clear paths forward, ensuring alignment with user needs and organizational goals.',
     tags: ['SWOT', "Porter's Five Forces", 'Strategic Group Analysis', 'Growth-Share Matrix', 'Perceptual Mapping', 'Business Model Canvas', 'Competitive Analysis', 'Customer Journey Mapping', 'Lean Canvas', 'Traction Roadmapping'],
   },
   {
-    number: '04',
-    title: 'Development & Technical Skills',
-    desc: "I code with HTML, CSS, JavaScript, React, React Native, Tailwind CSS, GSAP, Express.js, SQL, and Git/GitHub. APIs and WordPress are in my toolkit. My technical fluency ensures I understand what's required from engineering.",
-    tags: ['HTML', 'CSS', 'JavaScript', 'React', 'React Native', 'Tailwind CSS', 'GSAP', 'Express.js', 'SQL', 'Supabase', 'Vite', 'Git / GitHub', 'WordPress', 'APIs'],
-  },
-  {
-    number: '05',
-    title: 'AI & Automation',
-    desc: "AI is a core part of how I work and what I build — not an afterthought. I design agentic and multi-agent workflows, automate research and operations in n8n, and build with Claude Code: market-intelligence dashboards, a moodboard agent, and an LLM-powered knowledge base. I treat AI as a collaborator, with the prompt engineering and judgment to keep the output useful.",
-    tags: ['Claude', 'Claude Code', 'Agentic Workflows', 'Multi-Agent Systems', 'n8n', 'Workflow Automation', 'Prompt Engineering', 'LLM Integration', 'AI-Assisted Research', 'Gemini', 'Generative AI'],
-  },
-  {
-    number: '06',
+    number: '03',
     title: 'Marketing, Growth & Discoverability',
     desc: "Before focusing on product, I focused on reaching people. I've run campaigns, shaped content and social strategy, and worked across technical SEO and AEO — improving visibility in both traditional and AI-powered search. I've also built partnerships and go-to-market motions. This background helps me think about the full product lifecycle, not just the build.",
     tags: ['SEO / AEO', 'Discoverability', 'Marketing Automation', 'Go-to-Market', 'Content Strategy', 'Social Media Strategy', 'Campaign Management', 'Audience Development', 'Partnership Development', 'PR & Communications'],
+  },
+  {
+    number: '04',
+    title: 'Product Thinking & Research',
+    desc: "My process starts with the user: understanding their needs, analyzing the system, and defining what to build. I've led user research, journey mapping, usability testing, and synthesized findings into actionable steps. Research shapes my thinking, not just my process. I'm well-versed in Agile, Scrum, Kanban, and Waterfall, and applying them in high-stakes contexts.",
+    tags: ['User Research', 'Journey Mapping', 'User Testing', 'Information Architecture', 'Synthesis & Insights', 'Agile', 'Scrum', 'Kanban', 'Waterfall', 'Sprint Planning', 'Stakeholder Alignment'],
+  },
+  {
+    number: '05',
+    title: 'UX & Design',
+    desc: "Good UX isn't something you bolt on at the end — it's the reason people stay or leave. I've studied it, practiced it, and built it into how I evaluate every product decision. I know what makes an experience feel right, and more importantly, I know how to articulate why it doesn't when something is off.",
+    tags: ['Figma', 'Wireframing', 'Prototyping', 'Usability Testing', 'Accessibility', 'Information Architecture'],
+  },
+  {
+    number: '06',
+    title: 'Development & Technical Skills',
+    desc: "I code with HTML, CSS, JavaScript, React, React Native, Tailwind CSS, GSAP, Express.js, SQL, and Git/GitHub. APIs and WordPress are in my toolkit. My technical fluency ensures I understand what's required from engineering.",
+    tags: ['HTML', 'CSS', 'JavaScript', 'React', 'React Native', 'Tailwind CSS', 'GSAP', 'Express.js', 'SQL', 'Supabase', 'Vite', 'Git / GitHub', 'WordPress', 'APIs'],
   },
 ]
 
@@ -61,7 +61,7 @@ export default function Skills() {
       <Seo
         title="Skills | Ashley DiBuduo"
         description="Explore my skills across product, UX, AI &amp; automation, front-end development, and cross-functional delivery — from research and strategy to agentic workflows and shipping."
-        url="https://ashleydibuduo.ca/skills.html"
+        url="https://ashleydibuduo.ca/skills"
         ogDescription="Skills across product, UX, AI &amp; automation, front-end development, and cross-functional delivery."
         imageAlt="Ashley DiBuduo Skills and Tools"
         twitterDescription="Product, UX, AI &amp; automation, and front-end development skills with a focus on execution and delivery."
@@ -120,6 +120,9 @@ export default function Skills() {
             </ToolItem>
             <ToolItem name="Obsidian">
               <svg viewBox="0 0 32 32" width="26" height="26"><rect x="5" y="5" width="22" height="22" rx="5" fill="#7C3AED" /><text x="16" y="21" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="13" fontWeight="700" fill="#fff">O</text></svg>
+            </ToolItem>
+            <ToolItem name="Monday">
+              <svg viewBox="0 0 32 32" width="26" height="26"><rect x="5" y="5" width="22" height="22" rx="5" fill="#FF3D57" /><text x="16" y="21" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="13" fontWeight="700" fill="#fff">M</text></svg>
             </ToolItem>
           </div>
         </div>

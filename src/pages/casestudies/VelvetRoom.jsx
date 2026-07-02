@@ -21,7 +21,7 @@ export default function VelvetRoom() {
         title="Velvet Room — Case Study"
         description="Agile product case study designing a restaurant website. Includes user stories, sprints, UX design, and cross-functional collaboration."
         ogType="article"
-        url="https://ashleydibuduo.ca/casestudy-velvetroom.html"
+        url="https://ashleydibuduo.ca/projects/casestudy-velvetroom"
         ogTitle="Velvet Room Website Case Study | Ashley DiBuduo"
         ogDescription="An Agile/Scrum restaurant website project focused on UX, collaboration, and iterative delivery."
         image="https://ashleydibuduo.ca/images/og/casestudy-velvetroompreview.png"
@@ -34,7 +34,7 @@ export default function VelvetRoom() {
         {/* PAGE 1 — HERO + DETAILS BAR */}
         <div id="cs-pg1" className="page velvet-page-hero">
           <section className="cs-hero">
-            <img src="/images/case-studies/VelvetRoom-Hero.jpg" alt="Velvet Room Website Screen" />
+            <img src="/images/case-studies/VelvetRoom-Hero.jpg" width="2000" height="1333" alt="Velvet Room Website Screen" />
             <div className="cs-hero-gradient"></div>
             <div className="cs-hero-content">
               <h1>Velvet Room <span>Website</span></h1>
@@ -86,7 +86,7 @@ export default function VelvetRoom() {
               <p className="body-text">I served in a dual role as both Product Owner and Scrum Master — balancing product direction and backlog prioritization with sprint facilitation and delivery oversight. The scope was intentionally constrained: two required functional deliverables across six weeks. But constrained scope doesn't mean simple execution. When the complexity isn't in the requirements, it lives in the process — in how clearly roles are defined, how decisions get made, and how well a cross-functional team stays aligned sprint over sprint. That's where my energy was focused.</p>
             </div>
             <div className="cs-split-image">
-              <img src="/images/case-studies/VelvetRoom-UserStories.png" alt="User Stories Infographic" />
+              <img loading="lazy" src="/images/case-studies/VelvetRoom-UserStories.png" width="1200" height="1200" alt="User Stories Infographic" />
             </div>
           </div>
         </div>
@@ -95,7 +95,7 @@ export default function VelvetRoom() {
         <div id="cs-pg3" className="page fade-in velvet-challenge-page">
           <div className="cs-split">
             <div className="cs-split-image velvet-userstories-image">
-              <img src="/images/case-studies/VelvetRoom-Backlog.png" alt="Backlog & Sprint Infographic" />
+              <img loading="lazy" src="/images/case-studies/VelvetRoom-Backlog.png" width="1200" height="1200" alt="Backlog & Sprint Infographic" />
             </div>
             <div className="cs-split-text">
               <div className="section-label">The Challenge</div>
@@ -115,7 +115,7 @@ export default function VelvetRoom() {
               <div className="risk-card">
                 <div>
                   <div className="risk-section-title">Risk</div>
-                  <h4>Shared Role Ownership</h4>
+                  <h3>Shared Role Ownership</h3>
                   <p>Two team members holding Product Owner and Scrum Master responsibilities simultaneously — with no clear structure for who held final say on backlog prioritization or sprint facilitation at any given moment.</p>
                 </div>
                 <div>
@@ -131,7 +131,7 @@ export default function VelvetRoom() {
               <div className="risk-card">
                 <div>
                   <div className="risk-section-title">Risk</div>
-                  <h4>UX-to-Implementation Gaps</h4>
+                  <h3>UX-to-Implementation Gaps</h3>
                   <p>A cross-functional team split between design and development — gaps between wireframe intent and technical implementation are common, especially under weekly sprint pressure.</p>
                 </div>
                 <div>
@@ -147,7 +147,7 @@ export default function VelvetRoom() {
               <div className="risk-card">
                 <div>
                   <div className="risk-section-title">Risk</div>
-                  <h4>Variable Team Availability</h4>
+                  <h3>Variable Team Availability</h3>
                   <p>A five-person team operating across a compressed six-week window — sprint velocity dependent on availability that couldn't always be guaranteed week to week.</p>
                 </div>
                 <div>
@@ -201,8 +201,8 @@ export default function VelvetRoom() {
             <h2>Structure before <span>style.</span></h2>
             <p>Before any code was written, we wireframed every key page — mapping layouts, hierarchies, and user flows. These lo-fi frames were the shared reference point that kept designers and developers building the same thing. Alongside the wireframes, I built a sitemap to establish the full page hierarchy and navigation structure before any screens were designed. Getting the structure right early meant every layout decision that followed had something solid to anchor to.</p>
             <div className="velvet-wireframes-panel">
-              <img src="/images/case-studies/VelvetRoom-LoFiWireframes.png" alt="Lo-fi Wireframes" />
-              <img src="/images/case-studies/VelvetRoom-SiteMap.png" alt="Sitemap" />
+              <img loading="lazy" src="/images/case-studies/VelvetRoom-LoFiWireframes.png" width="1400" height="1400" alt="Lo-fi Wireframes" />
+              <img loading="lazy" src="/images/case-studies/VelvetRoom-SiteMap.png" width="1586" height="1508" alt="Sitemap" />
             </div>
           </div>
         </div>
@@ -245,7 +245,7 @@ export default function VelvetRoom() {
               </a>
             </div>
             <div className="cs-split-image velvet-live-prototype-image">
-              <img src="/images/case-studies/VelvetRoom-Hero.jpg" alt="Velvet Room Website Screen" />
+              <img loading="lazy" src="/images/case-studies/VelvetRoom-Hero.jpg" width="2000" height="1333" alt="Velvet Room Website Screen" />
             </div>
           </div>
         </div>
@@ -259,8 +259,8 @@ export default function VelvetRoom() {
           </div>
 
           <ProjectNav
-            prev={{ to: '/projects/casestudy-realstreet', title: 'REAL Street Festival' }}
-            next={{ to: '/projects/casestudy-firewatchbc', title: 'FirewatchBC Wildfire App' }}
+            prev={{ to: '/projects/casestudy-forme', title: 'Forme Styling App' }}
+            next={{ to: '/projects/casestudy-wayfair', title: 'Wayfair Rugs Market Intelligence' }}
           />
           <Footer />
         </div>

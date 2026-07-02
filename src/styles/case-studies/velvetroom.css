@@ -33,7 +33,7 @@
 .velvet-risks-page h2 { color: var(--off-white); }
 .velvet-risks-page h2 span { color: var(--chartreuse); }
 .velvet-risks-page .risk-section-title { color: var(--chartreuse); }
-.velvet-risks-page .risk-card h4 { color: var(--off-white); }
+.velvet-risks-page .risk-card h3 { color: var(--off-white); }
 .velvet-risks-page .risk-card p { color: var(--off-white); }
 
 /* PAGE 5 — SPRINT BREAKDOWN (off-white) */
@@ -111,7 +111,7 @@
   .velvet-risks-page .cs-risks-band .section-label { text-align: left; }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .velvet-wireframes-panel { flex-direction: column; }
   .velvet-wireframes-panel img { height: auto; max-height: 40vh; width: 100%; }
 }

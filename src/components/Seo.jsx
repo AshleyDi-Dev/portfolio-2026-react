@@ -9,7 +9,7 @@ export default function Seo({
   description,
   ogType = 'website',
   url,
-  image = 'https://ashleydibuduo.ca/images/og/Home.png',
+  image = 'https://ashleydibuduo.ca/images/og/Home.jpg',
   imageAlt,
   ogTitle,
   ogDescription,
@@ -22,6 +22,7 @@ export default function Seo({
       <title>{title}</title>
       {description && <meta name="description" content={description} />}
       {noindex && <meta name="robots" content="noindex, nofollow" />}
+      {url && <link rel="canonical" href={url} />}
 
       {/* Open Graph */}
       <meta property="og:title" content={ogTitle || title} />

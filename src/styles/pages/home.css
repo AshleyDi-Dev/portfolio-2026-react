@@ -300,9 +300,9 @@
 }
 
 .page-home .projects-preview .projects-grid {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
-  align-items: start;
+  align-items: stretch;
 }
 
 .page-home .project-card {
@@ -317,6 +317,7 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 1.5rem;
+  height: 100%;
 }
 
 .page-home .project-card:hover {
@@ -466,10 +467,40 @@
   transform: scale(1.1);
 }
 
-.page-home .projects-grid .project-card-link:nth-child(1) .project-card-image { background-color: #c4c4c4; }
-.page-home .projects-grid .project-card-link:nth-child(2) .project-card-image { background-color: #ffffff; }
-.page-home .projects-grid .project-card-link:nth-child(3) .project-card-image { background-color: var(--jet-black); }
-.page-home .projects-grid .project-card-link:nth-child(3) .project-card-image img { width: 100%; }
+/* Full-bleed treatment opted in per-project via `imageFill` in projects.js,
+   not tied to card position (position-based rules broke whenever the
+   featured order changed, since background/fill didn't travel with the project). */
+.page-home .projects-preview .project-card-image--fill img {
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* PLACEHOLDER CARD (featured grid — project without a live case study yet) */
+.page-home .placeholder-card {
+  border: 1px dashed rgba(0,0,0,0.18);
+}
+
+.page-home .placeholder-card-image {
+  background: rgba(0,0,0,0.03);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-home .placeholder-icon {
+  font-size: 1.5rem;
+  color: var(--sapphire);
+}
+
+.page-home .placeholder-tag {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: var(--off-white);
+  background: rgba(22,29,28,0.55);
+}
 
 .page-home .projects-preview .project-card-body { padding-top: 1rem; }
 .page-home .projects-preview .project-card-top { gap: 0.4rem; }
@@ -479,6 +510,7 @@
   text-decoration: none;
   color: inherit;
   cursor: pointer;
+  height: 100%;
 }
 
 .page-home .project-card-body {
@@ -565,7 +597,7 @@
   .page-home .projects-preview { padding: 4rem 2rem; }
   .page-home .section-header { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
   .page-home .projects-grid { grid-template-columns: 1fr; align-items: start; }
-  .page-home .projects-preview .projects-grid { grid-template-columns: repeat(2, 1fr); align-items: start; }
+  .page-home .projects-preview .projects-grid { grid-template-columns: repeat(2, 1fr); align-items: stretch; }
   .page-home .contact-cta { padding: 4rem 2rem; }
 }
 
@@ -584,7 +616,7 @@
   .page-home .wsma-card { padding: 1.75rem; }
   .page-home .wsma-number { font-size: 2.5rem; }
   .page-home .projects-preview { padding: 3rem 1.25rem; }
-  .page-home .projects-preview .projects-grid { grid-template-columns: 1fr; align-items: start; }
+  .page-home .projects-preview .projects-grid { grid-template-columns: 1fr; align-items: stretch; }
   .page-home .contact-cta { padding: 3rem 1.25rem; }
   .page-home .contact-cta h2 { font-size: clamp(2rem, 8vw, 3rem); }
 }

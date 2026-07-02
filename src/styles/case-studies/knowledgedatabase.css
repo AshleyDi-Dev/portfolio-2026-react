@@ -1,0 +1,81 @@
+/* ═══════════════════════════════════════
+   KNOWLEDGE DATABASE — per-study overrides
+═══════════════════════════════════════ */
+
+/* PAGE 1 — HERO (jet-black) */
+.kdb-page-hero { background: var(--jet-black); justify-content: space-between; }
+.kdb-hero-tags { margin-top: 1.25rem; margin-bottom: 0; }
+
+/* PAGE 2 — OVERVIEW (off-white) */
+.kdb-overview-page { background: var(--off-white); }
+.kdb-overview-page .section-label { color: var(--sapphire); }
+.kdb-overview-page h2 { color: var(--jet-black); }
+.kdb-overview-page h2 span { color: var(--sapphire); }
+.kdb-overview-page .body-text { color: var(--jet-black); }
+.kdb-overview-page .kdb-list { color: var(--jet-black); }
+.kdb-overview-page .kdb-list strong { color: var(--jet-black); font-weight: 700; }
+
+/* PAGE 3 — THE CHALLENGE (palm-leaf) */
+.kdb-challenge-page { background: var(--palm-leaf); }
+.kdb-challenge-page .section-label { color: var(--chartreuse); }
+.kdb-challenge-page h2 { color: var(--off-white); }
+.kdb-challenge-page h2 span { color: var(--chartreuse); }
+.kdb-challenge-page .body-text { color: var(--off-white); }
+
+/* PAGE 4 — MY APPROACH (jet-black) */
+.kdb-approach-page { background: var(--jet-black); }
+.kdb-approach-page .section-label { color: var(--chartreuse); }
+.kdb-approach-page h2 { color: var(--off-white); }
+.kdb-approach-page h2 span { color: var(--chartreuse); }
+.kdb-approach-page .cs-split-text p { color: var(--grey-olive); }
+
+/* PAGE 5 — KEY DECISIONS (off-white) */
+.kdb-decisions-page { background: var(--off-white); }
+.kdb-decisions-band { background: transparent; }
+.kdb-decisions-page .section-label { color: var(--sapphire); }
+.kdb-decisions-page h2 { color: var(--jet-black); }
+.kdb-decisions-page h2 span { color: var(--sapphire); }
+.kdb-decisions-page .risk-section-title { color: var(--sapphire); }
+.kdb-decisions-page .risk-card { border-color: rgba(92,102,127,0.3); }
+.kdb-decisions-page .risk-card h3 { color: var(--jet-black); }
+.kdb-decisions-page .risk-card p { color: var(--palm-leaf); }
+
+/* PAGE 6 — THE OUTPUT (grey-olive)
+   NOTE: grey-olive (#d3d4ce) and off-white (#efede4) are both light colors —
+   off-white text here previously gave a 1.27:1 contrast ratio (WCAG requires
+   4.5:1 for body text). Using jet-black/navy-blue instead, both well over 9:1. */
+.kdb-output-page { background: var(--grey-olive); }
+.kdb-output-page .section-label { color: var(--navy-blue); }
+.kdb-output-page h2 { color: var(--jet-black); font-family: var(--ff-Montserrat); font-weight: 900; }
+.kdb-output-page h2 span { color: var(--sapphire); }
+.kdb-output-page .body-text { color: var(--jet-black); }
+.kdb-output-page .kdb-list { color: var(--jet-black); }
+
+/* PAGE 7 — REFLECTION (palm-leaf) */
+.kdb-reflection-page { justify-content: space-between; }
+.kdb-reflection-section { flex: 1; background: var(--palm-leaf); }
+.kdb-reflection-section p { color: var(--off-white); }
+.kdb-reflection-section p + p { margin-top: 1.25rem; }
+
+/* SHARED — IMAGE PANEL */
+.kdb-image-panel { display: flex; align-items: center; justify-content: center; background: transparent; padding: 2rem; }
+.kdb-image-panel img { max-width: 80%; max-height: 80%; }
+
+/* SHARED — LISTS (matches firewatch-list/wayfair-list/forme-list) */
+.kdb-list {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.9rem;
+  color: var(--grey-olive);
+  line-height: 1.75;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.kdb-list strong { color: var(--off-white); font-weight: 500; }
+
+/* RESPONSIVE */
+@media (max-width: 1023px) {
+  .kdb-decisions-page .risks-grid { gap: 2px; }
+}

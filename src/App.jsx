@@ -12,6 +12,8 @@ import LaNotte from './pages/casestudies/LaNotte.jsx'
 import Forme from './pages/casestudies/Forme.jsx'
 import RealStreet from './pages/casestudies/RealStreet.jsx'
 import VelvetRoom from './pages/casestudies/VelvetRoom.jsx'
+import Wayfair from './pages/casestudies/Wayfair.jsx'
+import KnowledgeDatabase from './pages/casestudies/KnowledgeDatabase.jsx'
 
 export default function App() {
   return (
@@ -34,6 +36,8 @@ export default function App() {
         <Route path="/projects/casestudy-forme" element={<Forme />} />
         <Route path="/projects/casestudy-realstreet" element={<RealStreet />} />
         <Route path="/projects/casestudy-velvetroom" element={<VelvetRoom />} />
+        <Route path="/projects/casestudy-wayfair" element={<Wayfair />} />
+        <Route path="/projects/casestudy-knowledgedatabase" element={<KnowledgeDatabase />} />
       </Routes>
     </>
   )
