@@ -9,19 +9,19 @@ export default function Home() {
   return (
     <div className="page-home">
       <Seo
-        title="Ashley DiBuduo | Product Manager · AI & Automation | Portfolio"
-        description="Product manager and builder delivering user-focused digital products, AI workflows, and automation. Explore product, UX, and AI-assisted work."
+        title="Ashley DiBuduo | AI Product & Solutions Specialist | Portfolio"
+        description="AI Product & Solutions Specialist building agentic workflows, automation, and digital products — from strategy to execution. Explore case studies in AI, product, and UX."
         url="https://ashleydibuduo.ca"
-        ogTitle="Ashley DiBuduo | Product Manager · AI & Automation"
-        ogDescription="Product manager and builder bridging vision and execution — through UX, AI workflows, automation, and cross-functional delivery. Explore case studies and projects."
-        imageAlt="Ashley DiBuduo Product & AI Portfolio Preview"
-        twitterTitle="Ashley DiBuduo | Product Manager · AI & Automation"
-        twitterDescription="Product-focused portfolio showcasing UX, AI workflows, automation, and cross-functional delivery."
+        ogTitle="Ashley DiBuduo | AI Product & Solutions Specialist"
+        ogDescription="AI Product & Solutions Specialist bridging vision and execution — through agentic workflows, automation, and cross-functional delivery. Explore case studies and projects."
+        imageAlt="Ashley DiBuduo AI Product & Solutions Portfolio Preview"
+        twitterTitle="Ashley DiBuduo | AI Product & Solutions Specialist"
+        twitterDescription="AI Product & Solutions Specialist showcasing agentic workflows, automation, and cross-functional delivery."
         jsonLd={{
           '@context': 'https://schema.org',
           '@type': 'Person',
           name: 'Ashley DiBuduo',
-          jobTitle: 'Product Manager',
+          jobTitle: 'AI Product & Solutions Specialist',
           url: 'https://ashleydibuduo.ca',
           sameAs: [
             'https://www.linkedin.com/in/ashleydibuduo/',
