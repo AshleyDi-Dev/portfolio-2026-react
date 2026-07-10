@@ -16,6 +16,7 @@ export default function Seo({
   twitterTitle,
   twitterDescription,
   noindex = false,
+  jsonLd,
 }) {
   return (
     <Helmet>
@@ -23,6 +24,7 @@ export default function Seo({
       {description && <meta name="description" content={description} />}
       {noindex && <meta name="robots" content="noindex, nofollow" />}
       {url && <link rel="canonical" href={url} />}
+      {jsonLd && <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>}
 
       {/* Open Graph */}
       <meta property="og:title" content={ogTitle || title} />

@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import ScrollToTop from './components/ScrollToTop.jsx'
+import Analytics from './components/Analytics.jsx'
 import Layout from './components/Layout.jsx'
 import Home from './pages/Home.jsx'
 import Projects from './pages/Projects.jsx'
@@ -19,6 +20,7 @@ export default function App() {
   return (
     <>
       <ScrollToTop />
+      <Analytics />
       <Routes>
         {/* Standard pages share the Nav/Footer layout */}
         <Route element={<Layout />}>

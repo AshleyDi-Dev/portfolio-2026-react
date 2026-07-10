@@ -17,6 +17,17 @@ export default function Home() {
         imageAlt="Ashley DiBuduo Product & AI Portfolio Preview"
         twitterTitle="Ashley DiBuduo | Product Manager · AI & Automation"
         twitterDescription="Product-focused portfolio showcasing UX, AI workflows, automation, and cross-functional delivery."
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'Person',
+          name: 'Ashley DiBuduo',
+          jobTitle: 'Product Manager',
+          url: 'https://ashleydibuduo.ca',
+          sameAs: [
+            'https://www.linkedin.com/in/ashleydibuduo/',
+            'https://github.com/AshleyDi-Dev',
+          ],
+        }}
       />
 
       {/* HERO */}
