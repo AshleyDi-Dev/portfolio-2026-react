@@ -60,7 +60,7 @@ export default function About() {
             <div className="photo-accent"></div>
             <div className="photo-placeholder">
               <div className="photo-duotone"></div>
-              <img src="/images/test-photo.png" width="1344" height="2352" alt="Ashley DiBuduo" />
+              <img src="/images/Created-Test-Photo-NoBG.png" width="1344" height="2352" alt="Ashley DiBuduo" />
             </div>
           </div>
         </div>

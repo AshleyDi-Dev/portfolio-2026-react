@@ -180,15 +180,10 @@
   height: 100%;
   object-fit: cover;
   object-position: center 30%;
-  filter: grayscale(30%) contrast(1.1);
-  mix-blend-mode: luminosity;
 }
 
 .page-home .photo-duotone {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(77,97,244,0.3) 0%, rgba(27,45,42,0.5) 100%);
-  mix-blend-mode: color;
+  display: none;
 }
 
 .page-home .photo-label {

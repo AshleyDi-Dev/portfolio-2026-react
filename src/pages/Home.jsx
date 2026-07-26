@@ -46,7 +46,7 @@ export default function Home() {
             <div className="photo-bg-block"></div>
             <div className="photo-accent"></div>
             <div className="photo-placeholder">
-              <img src="/images/Headshot-square.png" width="868" height="1522" alt="Ashley DiBuduo" />
+              <img src="/images/Created_Heashot_Centered.png" width="868" height="1522" alt="Ashley DiBuduo" />
               <div className="photo-duotone"></div>
             </div>
             <span className="photo-label">Vancouver, BC</span>

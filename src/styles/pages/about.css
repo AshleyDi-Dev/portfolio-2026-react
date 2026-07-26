@@ -92,7 +92,11 @@
   position: absolute;
   top: 0; left: 20px;
   width: 380px; height: 600px;
-  background: linear-gradient(135deg, #2a4a45 0%, #1a3530 50%, #0f2420 100%);
+  background:
+    radial-gradient(ellipse 70% 55% at 25% 20%, rgba(62,84,245,0.35) 0%, rgba(62,84,245,0) 60%),
+    radial-gradient(ellipse 60% 50% at 80% 70%, rgba(206,255,26,0.12) 0%, rgba(206,255,26,0) 65%),
+    radial-gradient(ellipse 80% 70% at 60% 95%, #0f2420 0%, #16332c 100%),
+    linear-gradient(160deg, #2a4a45 0%, #1a3530 55%, #0f2420 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -102,10 +106,7 @@
 .page-about .photo-placeholder img { width: 100%; height: 100%; object-fit: cover; }
 
 .page-about .photo-duotone {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(77,97,244,0.3) 0%, rgba(27,45,42,0.5) 100%);
-  mix-blend-mode: color;
+  display: none;
 }
 
 /* BACKGROUND TIMELINE */
